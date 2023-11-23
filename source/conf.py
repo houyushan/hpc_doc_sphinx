@@ -10,12 +10,10 @@ project = '我的HPC文档'
 copyright = '2023, houys2'
 author = 'houys2'
 release = 'v0.1'
-record = '沪交ICP备20190201'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# extensions = []
 extensions = [
     'sphinx-prompt',
     'sphinx_copybutton',
@@ -25,7 +23,6 @@ extensions = [
 ]
 
 templates_path = ['_templates']
-# exclude_patterns = []
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
