@@ -1,0 +1,1545 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.png">
+    
+    
+      
+        <title>OSU Benchmarks - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OSU Benchmarks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/index.html" class="md-nav__link">
+        <span class="md-ellipsis">可视化平台</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transport/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文件系统与数据访问</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../index.html"><span class="md-ellipsis">软件</span></a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">软件</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module.html" class="md-nav__link">
+        <span class="md-ellipsis">软件模块使用方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compilers_and_languages/index.html" class="md-nav__link">
+        <span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">基准测试</span></a>
+          
+            <label for="__nav_10_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="基准测试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">基准测试</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hpl.html" class="md-nav__link">
+        <span class="md-ellipsis">HPL</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">OSU Benchmarks</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">OSU Benchmarks</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osu" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:集群上的osu (reference label)" class="md-ellipsis">集群上的OSU</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="思源一号上的osu (reference label)" class="md-ellipsis">思源一号上的OSU基准测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="思源一号上的OSU基准测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osu-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号使用 osu_latency 测量点对点通信延迟 (reference label)" class="md-ellipsis">思源一号使用 osu_<wbr>latency 测量点对点通信延迟</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-mbw-mr" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号上使用 osu_mbw_mr 测量点对点通信带宽 (reference label)" class="md-ellipsis">思源一号上使用 osu_<wbr>mbw_<wbr>mr 测量点对点通信带宽</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-bcast" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号上使用 osu_bcast 测量广播延迟 (reference label)" class="md-ellipsis">思源一号上使用 osu_<wbr>bcast 测量广播延迟</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="π2.0上的osu (reference label)" class="md-ellipsis">π2.<wbr>0上的OSU基准测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="π2.0上的OSU基准测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上使用 osu_latency 测量点对点通信延迟 (reference label)" class="md-ellipsis">π2.<wbr>0上使用 osu_<wbr>latency 测量点对点通信延迟</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id7" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上使用 osu_mbw_mr 测量点对点通信带宽 (reference label)" class="md-ellipsis">π2.<wbr>0上使用 osu_<wbr>mbw_<wbr>mr 测量点对点通信带宽</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上使用 osu_bcast 测量广播延迟 (reference label)" class="md-ellipsis">π2.<wbr>0上使用 osu_<wbr>bcast 测量广播延迟</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armosu" class="md-nav__link">
+    <span title="arm上的osu (reference label)" class="md-ellipsis">ARM上的OSU基准测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARM上的OSU基准测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arm-osu-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上使用 osu_latency 测量点对点通信延迟 (reference label)" class="md-ellipsis">ARM上使用 osu_<wbr>latency 测量点对点通信延迟</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-osu-mbw-mr" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上使用 osu_mbw_mr 测量点对点通信带宽 (reference label)" class="md-ellipsis">ARM上使用 osu_<wbr>mbw_<wbr>mr 测量点对点通信带宽</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-osu-bcast" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上使用 osu_bcast 测量广播延迟 (reference label)" class="md-ellipsis">ARM上使用 osu_<wbr>bcast 测量广播延迟</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:测试结果 (reference label)" class="md-ellipsis">测试结果</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="测试结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:osu mpi latency (reference label)" class="md-ellipsis">OSU MPI Latency</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-multiple-bandwidth-message-rate" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:osu mpi multiple bandwidth / message rate (reference label)" class="md-ellipsis">OSU MPI Multiple Bandwidth / Message Rate</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSU MPI Multiple Bandwidth / Message Rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-multiple-bandwidth" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号上的osu mpi multiple bandwidth (reference label)" class="md-ellipsis">思源一号上的OSU MPI Multiple Bandwidth</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id11" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上的osu mpi multiple bandwidth (reference label)" class="md-ellipsis">π2.<wbr>0上的OSU MPI Multiple Bandwidth</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armosu-mpi-multiple-bandwidth" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上的osu mpi multiple bandwidth (reference label)" class="md-ellipsis">ARM上的OSU MPI Multiple Bandwidth</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-broadcast-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:osu mpi broadcast latency (reference label)" class="md-ellipsis">OSU MPI Broadcast Latency</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id12" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hpcg.html" class="md-nav__link">
+        <span class="md-ellipsis">HPCG</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="minife.html" class="md-nav__link">
+        <span class="md-ellipsis">minife</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ior.html" class="md-nav__link">
+        <span class="md-ellipsis">IOR</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mdtest.html" class="md-nav__link">
+        <span class="md-ellipsis">mdtest</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io500.html" class="md-nav__link">
+        <span class="md-ellipsis">io500</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/index.html" class="md-nav__link">
+        <span class="md-ellipsis">AI 计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineeringscience/index.html" class="md-nav__link">
+        <span class="md-ellipsis">原子分子工程计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bioinformatics/index.html" class="md-nav__link">
+        <span class="md-ellipsis">生物信息计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osu" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:集群上的osu (reference label)" class="md-ellipsis">集群上的OSU</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="思源一号上的osu (reference label)" class="md-ellipsis">思源一号上的OSU基准测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="思源一号上的OSU基准测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osu-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号使用 osu_latency 测量点对点通信延迟 (reference label)" class="md-ellipsis">思源一号使用 osu_<wbr>latency 测量点对点通信延迟</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-mbw-mr" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号上使用 osu_mbw_mr 测量点对点通信带宽 (reference label)" class="md-ellipsis">思源一号上使用 osu_<wbr>mbw_<wbr>mr 测量点对点通信带宽</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-bcast" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号上使用 osu_bcast 测量广播延迟 (reference label)" class="md-ellipsis">思源一号上使用 osu_<wbr>bcast 测量广播延迟</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="π2.0上的osu (reference label)" class="md-ellipsis">π2.<wbr>0上的OSU基准测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="π2.0上的OSU基准测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上使用 osu_latency 测量点对点通信延迟 (reference label)" class="md-ellipsis">π2.<wbr>0上使用 osu_<wbr>latency 测量点对点通信延迟</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id7" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上使用 osu_mbw_mr 测量点对点通信带宽 (reference label)" class="md-ellipsis">π2.<wbr>0上使用 osu_<wbr>mbw_<wbr>mr 测量点对点通信带宽</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上使用 osu_bcast 测量广播延迟 (reference label)" class="md-ellipsis">π2.<wbr>0上使用 osu_<wbr>bcast 测量广播延迟</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armosu" class="md-nav__link">
+    <span title="arm上的osu (reference label)" class="md-ellipsis">ARM上的OSU基准测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARM上的OSU基准测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arm-osu-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上使用 osu_latency 测量点对点通信延迟 (reference label)" class="md-ellipsis">ARM上使用 osu_<wbr>latency 测量点对点通信延迟</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-osu-mbw-mr" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上使用 osu_mbw_mr 测量点对点通信带宽 (reference label)" class="md-ellipsis">ARM上使用 osu_<wbr>mbw_<wbr>mr 测量点对点通信带宽</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-osu-bcast" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上使用 osu_bcast 测量广播延迟 (reference label)" class="md-ellipsis">ARM上使用 osu_<wbr>bcast 测量广播延迟</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:测试结果 (reference label)" class="md-ellipsis">测试结果</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="测试结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:osu mpi latency (reference label)" class="md-ellipsis">OSU MPI Latency</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-multiple-bandwidth-message-rate" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:osu mpi multiple bandwidth / message rate (reference label)" class="md-ellipsis">OSU MPI Multiple Bandwidth / Message Rate</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSU MPI Multiple Bandwidth / Message Rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-multiple-bandwidth" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:思源一号上的osu mpi multiple bandwidth (reference label)" class="md-ellipsis">思源一号上的OSU MPI Multiple Bandwidth</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id11" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:π2.0上的osu mpi multiple bandwidth (reference label)" class="md-ellipsis">π2.<wbr>0上的OSU MPI Multiple Bandwidth</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armosu-mpi-multiple-bandwidth" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:arm上的osu mpi multiple bandwidth (reference label)" class="md-ellipsis">ARM上的OSU MPI Multiple Bandwidth</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osu-mpi-broadcast-latency" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:osu mpi broadcast latency (reference label)" class="md-ellipsis">OSU MPI Broadcast Latency</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id12" class="md-nav__link">
+    <span title="app/benchtools/osubenchmarks:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="osu-benchmarks">OSU Benchmarks<a class="headerlink" href="#osu-benchmarks" title="Permalink to this heading">¶</a></h1>
+<h2 id="id1">简介<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<p>OSU Benchmarks</p>
+<p>超算平台通过模块提供了OSU Benchmarsk模块，可用 <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> 指令加载。</p>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>版本</p></th>
+<th class="head"><p>平台</p></th>
+<th class="head"><p>构建方式</p></th>
+<th class="head"><p>模块名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5.7.1</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>spack</p></td>
+<td><p>osu-micro-benchmarks/5.7.1-gcc-11.2.0-openmpi 思源一号</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.7.1</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>spack</p></td>
+<td><p>osu-micro-benchmarks/5.7.1-gcc-9.2.0-openmpi-4.0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>5.6.3</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>spack</p></td>
+<td><p>osu-micro-benchmarks/5.6.3-gcc-9.3.0-openmpi</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="osu">集群上的OSU<a class="headerlink" href="#osu" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id2">思源一号上的OSU</a></p></li>
+<li><p><a class="reference internal" href="#id4">π2.0上的OSU</a></p></li>
+<li><p><a class="reference internal" href="#armosu">ARM上的OSU</a></p></li>
+</ul>
+<h2 id="id2"><span id="id3"></span>思源一号上的OSU基准测试<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h3 id="osu-latency">思源一号使用 osu_latency 测量点对点通信延迟<a class="headerlink" href="#osu-latency" title="Permalink to this heading">¶</a></h3>
+<p>作业脚本 <code class="docutils literal notranslate"><span class="pre">osu_latency.slurm</span></code> 在两个节点上各启动一个MPI进程，测量两个MPI进程之间的通信延迟。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=osu_latency</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -n 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.error</span>
+
+module<span class="w"> </span>load<span class="w"> </span>openmpi
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.7.1-gcc-11.2.0-openmpi
+
+mpirun<span class="w"> </span>osu_latency
+</code></pre></div>
+</div>
+<h3 id="osu-mbw-mr">思源一号上使用 osu_mbw_mr 测量点对点通信带宽<a class="headerlink" href="#osu-mbw-mr" title="Permalink to this heading">¶</a></h3>
+<p>作业脚本 <code class="docutils literal notranslate"><span class="pre">osu_bw.slurm</span></code> 在两个节点上各启动一个MPI进程，测量两个MPI进程之间的通信带宽。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=osu_latency</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -n 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.error</span>
+
+module<span class="w"> </span>load<span class="w"> </span>openmpi
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.7.1-gcc-11.2.0-openmpi
+
+mpirun<span class="w">  </span>osu_mbw_mr
+</code></pre></div>
+</div>
+<h3 id="osu-bcast">思源一号上使用 osu_bcast 测量广播延迟<a class="headerlink" href="#osu-bcast" title="Permalink to this heading">¶</a></h3>
+<p>需要注意广播延迟和参与测试的节点数量正相关，如果需要对比性能，要保证测试作业所用的节点数一致。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=osu_latency</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -n 4</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.error</span>
+
+module<span class="w"> </span>load<span class="w"> </span>openmpi
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.7.1-gcc-11.2.0-openmpi
+
+mpirun<span class="w"> </span>osu_bcast
+</code></pre></div>
+</div>
+<h2 id="id4"><span id="id5"></span>π2.0上的OSU基准测试<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h3 id="id6">π2.0上使用 osu_latency 测量点对点通信延迟<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<p>作业脚本 <code class="docutils literal notranslate"><span class="pre">osu_latency.slurm</span></code> 在两个节点上各启动一个MPI进程，测量两个MPI进程之间的通信延迟。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=osu</span>
+<span class="c1">#SBATCH --partition=cpu</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH -n 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+
+module<span class="w"> </span>load<span class="w"> </span>gcc/9.2.0
+module<span class="w"> </span>load<span class="w"> </span>openmpi/4.0.5-gcc-9.2.0
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.7.1-gcc-9.2.0-openmpi-4.0.5
+
+mpirun<span class="w"> </span>osu_latency
+</code></pre></div>
+</div>
+<h3 id="id7">π2.0上使用 osu_mbw_mr 测量点对点通信带宽<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<p>作业脚本 <code class="docutils literal notranslate"><span class="pre">osu_bw.slurm</span></code> 在两个节点上各启动一个MPI进程，测量两个MPI进程之间的通信带宽。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=osu</span>
+<span class="c1">#SBATCH --partition=cpu</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH -n 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+
+module<span class="w"> </span>load<span class="w"> </span>gcc/9.2.0
+module<span class="w"> </span>load<span class="w"> </span>openmpi/4.0.5-gcc-9.2.0
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.7.1-gcc-9.2.0-openmpi-4.0.5
+
+mpirun<span class="w"> </span>osu_mbw_mr
+</code></pre></div>
+</div>
+<h3 id="id8">π2.0上使用 osu_bcast 测量广播延迟<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
+<p>需要注意广播延迟和参与测试的节点数量正相关，如果需要对比性能，要保证测试作业所用的节点数一致。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=osu</span>
+<span class="c1">#SBATCH --partition=cpu</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH -n 4</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+
+module<span class="w"> </span>load<span class="w"> </span>gcc/9.2.0
+module<span class="w"> </span>load<span class="w"> </span>openmpi/4.0.5-gcc-9.2.0
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.7.1-gcc-9.2.0-openmpi-4.0.5
+
+mpirun<span class="w"> </span>osu_bcast
+</code></pre></div>
+</div>
+<h2 id="armosu"><span id="id9"></span>ARM上的OSU基准测试<a class="headerlink" href="#armosu" title="Permalink to this heading">¶</a></h2>
+<h3 id="arm-osu-latency">ARM上使用 osu_latency 测量点对点通信延迟<a class="headerlink" href="#arm-osu-latency" title="Permalink to this heading">¶</a></h3>
+<p>作业脚本 <code class="docutils literal notranslate"><span class="pre">osu_latency.slurm</span></code> 在两个节点上各启动一个MPI进程，测量两个MPI进程之间的通信延迟。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=osu_latency</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH -n 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --exclusive</span>
+
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
+
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.6.3-gcc-9.3.0-openmpi
+
+srun<span class="w"> </span>--mpi<span class="o">=</span>pmi2<span class="w"> </span>osu_latency
+</code></pre></div>
+</div>
+<h3 id="arm-osu-mbw-mr">ARM上使用 osu_mbw_mr 测量点对点通信带宽<a class="headerlink" href="#arm-osu-mbw-mr" title="Permalink to this heading">¶</a></h3>
+<p>作业脚本 <code class="docutils literal notranslate"><span class="pre">osu_bw.slurm</span></code> 在两个节点上各启动一个MPI进程，测量两个MPI进程之间的通信带宽。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=osu_bw</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH -n 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --exclusive</span>
+
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
+
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.6.3-gcc-9.3.0-openmpi
+
+srun<span class="w"> </span>--mpi<span class="o">=</span>pmi2<span class="w"> </span>osu_mbw_mr
+</code></pre></div>
+</div>
+<h3 id="arm-osu-bcast">ARM上使用 osu_bcast 测量广播延迟<a class="headerlink" href="#arm-osu-bcast" title="Permalink to this heading">¶</a></h3>
+<p>需要注意广播延迟和参与测试的节点数量正相关，如果需要对比性能，要保证测试作业所用的节点数一致。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=osu_bw</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH -n 4</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --exclusive</span>
+
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
+
+module<span class="w"> </span>load<span class="w"> </span>osu-micro-benchmarks/5.6.3-gcc-9.3.0-openmpi
+
+srun<span class="w"> </span>--mpi<span class="o">=</span>pmi2<span class="w"> </span>osu_bcast
+</code></pre></div>
+</div>
+<h2 id="id10">测试结果<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
+<h3 id="osu-mpi-latency">OSU MPI Latency<a class="headerlink" href="#osu-mpi-latency" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># OSU MPI Latency Test</span>
+<span class="w">          </span>思源一号<span class="w"> </span>v5.7.1<span class="w">       </span>π2.0<span class="w"> </span>v5.7.1<span class="w">          </span>ARM<span class="w"> </span>v5.6.3
+<span class="c1"># Size       Latency (us)       Latency (us)       Latency (us)</span>
+<span class="m">0</span><span class="w">                    </span><span class="m">0</span>.79<span class="w">               </span><span class="m">1</span>.55<span class="w">               </span><span class="m">1</span>.27
+<span class="m">1</span><span class="w">                    </span><span class="m">0</span>.79<span class="w">               </span><span class="m">1</span>.34<span class="w">               </span><span class="m">1</span>.25
+<span class="m">2</span><span class="w">                    </span><span class="m">0</span>.79<span class="w">               </span><span class="m">1</span>.29<span class="w">               </span><span class="m">1</span>.24
+<span class="m">4</span><span class="w">                    </span><span class="m">0</span>.79<span class="w">               </span><span class="m">1</span>.25<span class="w">               </span><span class="m">1</span>.25
+<span class="m">8</span><span class="w">                    </span><span class="m">0</span>.78<span class="w">               </span><span class="m">1</span>.24<span class="w">               </span><span class="m">1</span>.25
+<span class="m">16</span><span class="w">                   </span><span class="m">0</span>.79<span class="w">               </span><span class="m">1</span>.59<span class="w">               </span><span class="m">1</span>.26
+<span class="m">32</span><span class="w">                   </span><span class="m">0</span>.82<span class="w">               </span><span class="m">1</span>.59<span class="w">               </span><span class="m">1</span>.29
+<span class="m">64</span><span class="w">                   </span><span class="m">0</span>.91<span class="w">               </span><span class="m">1</span>.50<span class="w">               </span><span class="m">1</span>.43
+<span class="m">128</span><span class="w">                  </span><span class="m">0</span>.95<span class="w">               </span><span class="m">1</span>.51<span class="w">               </span><span class="m">1</span>.47
+<span class="m">256</span><span class="w">                  </span><span class="m">1</span>.24<span class="w">               </span><span class="m">1</span>.56<span class="w">               </span><span class="m">1</span>.95
+<span class="m">512</span><span class="w">                  </span><span class="m">1</span>.26<span class="w">               </span><span class="m">1</span>.63<span class="w">               </span><span class="m">2</span>.23
+<span class="m">1024</span><span class="w">                 </span><span class="m">1</span>.37<span class="w">               </span><span class="m">1</span>.79<span class="w">               </span><span class="m">2</span>.77
+<span class="m">2048</span><span class="w">                 </span><span class="m">2</span>.08<span class="w">               </span><span class="m">2</span>.11<span class="w">               </span><span class="m">3</span>.61
+<span class="m">4096</span><span class="w">                 </span><span class="m">2</span>.80<span class="w">               </span><span class="m">2</span>.71<span class="w">               </span><span class="m">4</span>.86
+<span class="m">8192</span><span class="w">                 </span><span class="m">3</span>.85<span class="w">               </span><span class="m">3</span>.98<span class="w">               </span><span class="m">7</span>.20
+<span class="m">16384</span><span class="w">                </span><span class="m">5</span>.73<span class="w">               </span><span class="m">9</span>.11<span class="w">               </span><span class="m">9</span>.93
+<span class="m">32768</span><span class="w">                </span><span class="m">7</span>.62<span class="w">              </span><span class="m">12</span>.15<span class="w">              </span><span class="m">15</span>.40
+<span class="m">65536</span><span class="w">               </span><span class="m">10</span>.62<span class="w">              </span><span class="m">23</span>.43<span class="w">              </span><span class="m">26</span>.64
+<span class="m">131072</span><span class="w">              </span><span class="m">15</span>.85<span class="w">              </span><span class="m">32</span>.53<span class="w">              </span><span class="m">49</span>.34
+<span class="m">262144</span><span class="w">              </span><span class="m">21</span>.32<span class="w">              </span><span class="m">44</span>.96<span class="w">              </span><span class="m">27</span>.79
+<span class="m">524288</span><span class="w">              </span><span class="m">39</span>.55<span class="w">              </span><span class="m">65</span>.61<span class="w">              </span><span class="m">49</span>.03
+<span class="m">1048576</span><span class="w">             </span><span class="m">74</span>.91<span class="w">             </span><span class="m">109</span>.06<span class="w">              </span><span class="m">91</span>.58
+<span class="m">2097152</span><span class="w">            </span><span class="m">145</span>.99<span class="w">             </span><span class="m">199</span>.42<span class="w">             </span><span class="m">176</span>.82
+<span class="m">4194304</span><span class="w">            </span><span class="m">286</span>.26<span class="w">             </span><span class="m">393</span>.98<span class="w">             </span><span class="m">346</span>.91
+</code></pre></div>
+</div>
+<h3 id="osu-mpi-multiple-bandwidth-message-rate">OSU MPI Multiple Bandwidth / Message Rate<a class="headerlink" href="#osu-mpi-multiple-bandwidth-message-rate" title="Permalink to this heading">¶</a></h3>
+<h4 id="osu-mpi-multiple-bandwidth">思源一号上的OSU MPI Multiple Bandwidth<a class="headerlink" href="#osu-mpi-multiple-bandwidth" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># OSU MPI Multiple Bandwidth / Message Rate Test v5.7.1</span>
+<span class="c1"># [ pairs: 1 ] [ window size: 64 ]</span>
+<span class="c1"># Size                  MB/s        Messages/s</span>
+<span class="m">1</span><span class="w">                       </span><span class="m">6</span>.82<span class="w">        </span><span class="m">6819901</span>.32
+<span class="m">2</span><span class="w">                      </span><span class="m">13</span>.70<span class="w">        </span><span class="m">6849644</span>.94
+<span class="m">4</span><span class="w">                      </span><span class="m">27</span>.43<span class="w">        </span><span class="m">6857747</span>.81
+<span class="m">8</span><span class="w">                      </span><span class="m">54</span>.70<span class="w">        </span><span class="m">6837453</span>.43
+<span class="m">16</span><span class="w">                    </span><span class="m">109</span>.97<span class="w">        </span><span class="m">6873169</span>.62
+<span class="m">32</span><span class="w">                    </span><span class="m">218</span>.58<span class="w">        </span><span class="m">6830520</span>.90
+<span class="m">64</span><span class="w">                    </span><span class="m">402</span>.61<span class="w">        </span><span class="m">6290822</span>.77
+<span class="m">128</span><span class="w">                   </span><span class="m">773</span>.02<span class="w">        </span><span class="m">6039234</span>.26
+<span class="m">256</span><span class="w">                  </span><span class="m">1446</span>.47<span class="w">        </span><span class="m">5650271</span>.17
+<span class="m">512</span><span class="w">                  </span><span class="m">2646</span>.67<span class="w">        </span><span class="m">5169286</span>.04
+<span class="m">1024</span><span class="w">                 </span><span class="m">4411</span>.59<span class="w">        </span><span class="m">4308188</span>.99
+<span class="m">2048</span><span class="w">                 </span><span class="m">7656</span>.33<span class="w">        </span><span class="m">3738444</span>.41
+<span class="m">4096</span><span class="w">                </span><span class="m">10508</span>.77<span class="w">        </span><span class="m">2565618</span>.70
+<span class="m">8192</span><span class="w">                </span><span class="m">12463</span>.12<span class="w">        </span><span class="m">1521377</span>.49
+<span class="m">16384</span><span class="w">               </span><span class="m">13336</span>.64<span class="w">         </span><span class="m">814004</span>.02
+<span class="m">32768</span><span class="w">               </span><span class="m">13109</span>.51<span class="w">         </span><span class="m">400070</span>.54
+<span class="m">65536</span><span class="w">               </span><span class="m">13959</span>.39<span class="w">         </span><span class="m">213003</span>.44
+<span class="m">131072</span><span class="w">              </span><span class="m">14438</span>.86<span class="w">         </span><span class="m">110159</span>.77
+<span class="m">262144</span><span class="w">              </span><span class="m">14689</span>.16<span class="w">          </span><span class="m">56034</span>.71
+<span class="m">524288</span><span class="w">              </span><span class="m">14825</span>.20<span class="w">          </span><span class="m">28276</span>.83
+<span class="m">1048576</span><span class="w">             </span><span class="m">14887</span>.78<span class="w">          </span><span class="m">14198</span>.09
+<span class="m">2097152</span><span class="w">             </span><span class="m">14909</span>.55<span class="w">           </span><span class="m">7109</span>.43
+<span class="m">4194304</span><span class="w">             </span><span class="m">14910</span>.01<span class="w">           </span><span class="m">3554</span>.82
+</code></pre></div>
+</div>
+<h4 id="id11">π2.0上的OSU MPI Multiple Bandwidth<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># OSU MPI Multiple Bandwidth / Message Rate Test v5.7.1</span>
+<span class="c1"># [ pairs: 1 ] [ window size: 64 ]</span>
+<span class="c1"># Size                  MB/s        Messages/s</span>
+<span class="m">1</span><span class="w">                       </span><span class="m">1</span>.45<span class="w">        </span><span class="m">1454746</span>.80
+<span class="m">2</span><span class="w">                       </span><span class="m">2</span>.91<span class="w">        </span><span class="m">1456550</span>.86
+<span class="m">4</span><span class="w">                       </span><span class="m">7</span>.50<span class="w">        </span><span class="m">1875912</span>.49
+<span class="m">8</span><span class="w">                      </span><span class="m">14</span>.89<span class="w">        </span><span class="m">1860936</span>.30
+<span class="m">16</span><span class="w">                     </span><span class="m">29</span>.09<span class="w">        </span><span class="m">1818298</span>.04
+<span class="m">32</span><span class="w">                     </span><span class="m">65</span>.96<span class="w">        </span><span class="m">2061307</span>.14
+<span class="m">64</span><span class="w">                    </span><span class="m">130</span>.36<span class="w">        </span><span class="m">2036819</span>.98
+<span class="m">128</span><span class="w">                   </span><span class="m">270</span>.56<span class="w">        </span><span class="m">2113729</span>.90
+<span class="m">256</span><span class="w">                   </span><span class="m">586</span>.45<span class="w">        </span><span class="m">2290813</span>.80
+<span class="m">512</span><span class="w">                  </span><span class="m">1108</span>.22<span class="w">        </span><span class="m">2164499</span>.97
+<span class="m">1024</span><span class="w">                 </span><span class="m">1934</span>.49<span class="w">        </span><span class="m">1889151</span>.11
+<span class="m">2048</span><span class="w">                 </span><span class="m">3082</span>.52<span class="w">        </span><span class="m">1505136</span>.87
+<span class="m">4096</span><span class="w">                 </span><span class="m">4380</span>.14<span class="w">        </span><span class="m">1069370</span>.93
+<span class="m">8192</span><span class="w">                 </span><span class="m">6035</span>.57<span class="w">         </span><span class="m">736763</span>.84
+<span class="m">16384</span><span class="w">                </span><span class="m">4511</span>.71<span class="w">         </span><span class="m">275372</span>.74
+<span class="m">32768</span><span class="w">                </span><span class="m">6618</span>.96<span class="w">         </span><span class="m">201994</span>.78
+<span class="m">65536</span><span class="w">                </span><span class="m">9373</span>.92<span class="w">         </span><span class="m">143034</span>.69
+<span class="m">131072</span><span class="w">              </span><span class="m">11988</span>.77<span class="w">          </span><span class="m">91467</span>.04
+<span class="m">262144</span><span class="w">              </span><span class="m">12119</span>.05<span class="w">          </span><span class="m">46230</span>.50
+<span class="m">524288</span><span class="w">              </span><span class="m">12193</span>.54<span class="w">          </span><span class="m">23257</span>.32
+<span class="m">1048576</span><span class="w">             </span><span class="m">12226</span>.86<span class="w">          </span><span class="m">11660</span>.44
+<span class="m">2097152</span><span class="w">             </span><span class="m">12140</span>.43<span class="w">           </span><span class="m">5789</span>.01
+<span class="m">4194304</span><span class="w">             </span><span class="m">12108</span>.15<span class="w">           </span><span class="m">2886</span>.81
+</code></pre></div>
+</div>
+<h4 id="armosu-mpi-multiple-bandwidth">ARM上的OSU MPI Multiple Bandwidth<a class="headerlink" href="#armosu-mpi-multiple-bandwidth" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># OSU MPI Multiple Bandwidth / Message Rate Test v5.6.3</span>
+<span class="c1"># [ pairs: 1 ] [ window size: 64 ]</span>
+<span class="c1"># Size                  MB/s        Messages/s</span>
+<span class="m">1</span><span class="w">                       </span><span class="m">4</span>.24<span class="w">        </span><span class="m">4235302</span>.84
+<span class="m">2</span><span class="w">                       </span><span class="m">8</span>.82<span class="w">        </span><span class="m">4409629</span>.80
+<span class="m">4</span><span class="w">                      </span><span class="m">17</span>.55<span class="w">        </span><span class="m">4387775</span>.11
+<span class="m">8</span><span class="w">                      </span><span class="m">34</span>.67<span class="w">        </span><span class="m">4333726</span>.75
+<span class="m">16</span><span class="w">                     </span><span class="m">67</span>.82<span class="w">        </span><span class="m">4238584</span>.63
+<span class="m">32</span><span class="w">                    </span><span class="m">129</span>.61<span class="w">        </span><span class="m">4050327</span>.86
+<span class="m">64</span><span class="w">                    </span><span class="m">262</span>.59<span class="w">        </span><span class="m">4102908</span>.64
+<span class="m">128</span><span class="w">                   </span><span class="m">499</span>.14<span class="w">        </span><span class="m">3899519</span>.14
+<span class="m">256</span><span class="w">                   </span><span class="m">811</span>.93<span class="w">        </span><span class="m">3171585</span>.76
+<span class="m">512</span><span class="w">                  </span><span class="m">1529</span>.29<span class="w">        </span><span class="m">2986902</span>.43
+<span class="m">1024</span><span class="w">                 </span><span class="m">2068</span>.14<span class="w">        </span><span class="m">2019668</span>.41
+<span class="m">2048</span><span class="w">                 </span><span class="m">2700</span>.72<span class="w">        </span><span class="m">1318710</span>.75
+<span class="m">4096</span><span class="w">                 </span><span class="m">3399</span>.47<span class="w">         </span><span class="m">829948</span>.38
+<span class="m">8192</span><span class="w">                 </span><span class="m">3878</span>.01<span class="w">         </span><span class="m">473390</span>.04
+<span class="m">16384</span><span class="w">               </span><span class="m">11338</span>.92<span class="w">         </span><span class="m">692072</span>.80
+<span class="m">32768</span><span class="w">               </span><span class="m">11810</span>.79<span class="w">         </span><span class="m">360436</span>.61
+<span class="m">65536</span><span class="w">               </span><span class="m">12074</span>.32<span class="w">         </span><span class="m">184239</span>.48
+<span class="m">131072</span><span class="w">              </span><span class="m">12190</span>.81<span class="w">          </span><span class="m">93008</span>.50
+<span class="m">262144</span><span class="w">              </span><span class="m">12266</span>.13<span class="w">          </span><span class="m">46791</span>.59
+<span class="m">524288</span><span class="w">              </span><span class="m">12305</span>.57<span class="w">          </span><span class="m">23471</span>.02
+<span class="m">1048576</span><span class="w">             </span><span class="m">12324</span>.26<span class="w">          </span><span class="m">11753</span>.33
+<span class="m">2097152</span><span class="w">             </span><span class="m">12335</span>.56<span class="w">           </span><span class="m">5882</span>.05
+<span class="m">4194304</span><span class="w">             </span><span class="m">12340</span>.24<span class="w">           </span><span class="m">2942</span>.14
+</code></pre></div>
+</div>
+<h3 id="osu-mpi-broadcast-latency">OSU MPI Broadcast Latency<a class="headerlink" href="#osu-mpi-broadcast-latency" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># OSU MPI Broadcast Latency Test</span>
+<span class="w">                 </span>思源一号<span class="w">                </span>π2.0<span class="w">                  </span>ARM
+<span class="c1"># Size    Avg Latency(us)      Avg Latency(us)      Avg Latency(us)</span>
+<span class="m">1</span><span class="w">                    </span><span class="m">0</span>.45<span class="w">                 </span><span class="m">3</span>.00<span class="w">                 </span><span class="m">2</span>.35
+<span class="m">2</span><span class="w">                    </span><span class="m">0</span>.44<span class="w">                 </span><span class="m">2</span>.89<span class="w">                 </span><span class="m">2</span>.43
+<span class="m">4</span><span class="w">                    </span><span class="m">0</span>.45<span class="w">                 </span><span class="m">2</span>.87<span class="w">                 </span><span class="m">2</span>.38
+<span class="m">8</span><span class="w">                    </span><span class="m">0</span>.44<span class="w">                 </span><span class="m">2</span>.96<span class="w">                 </span><span class="m">2</span>.37
+<span class="m">16</span><span class="w">                   </span><span class="m">0</span>.45<span class="w">                 </span><span class="m">4</span>.02<span class="w">                 </span><span class="m">2</span>.42
+<span class="m">32</span><span class="w">                   </span><span class="m">0</span>.47<span class="w">                 </span><span class="m">3</span>.91<span class="w">                 </span><span class="m">2</span>.42
+<span class="m">64</span><span class="w">                   </span><span class="m">0</span>.87<span class="w">                 </span><span class="m">3</span>.71<span class="w">                 </span><span class="m">2</span>.59
+<span class="m">128</span><span class="w">                  </span><span class="m">0</span>.66<span class="w">                 </span><span class="m">3</span>.74<span class="w">                 </span><span class="m">2</span>.66
+<span class="m">256</span><span class="w">                  </span><span class="m">1</span>.01<span class="w">                 </span><span class="m">3</span>.79<span class="w">                 </span><span class="m">3</span>.11
+<span class="m">512</span><span class="w">                  </span><span class="m">1</span>.11<span class="w">                 </span><span class="m">4</span>.10<span class="w">                 </span><span class="m">3</span>.36
+<span class="m">1024</span><span class="w">                 </span><span class="m">1</span>.24<span class="w">                 </span><span class="m">4</span>.04<span class="w">                 </span><span class="m">3</span>.86
+<span class="m">2048</span><span class="w">                 </span><span class="m">3</span>.35<span class="w">                 </span><span class="m">8</span>.39<span class="w">                 </span><span class="m">4</span>.20
+<span class="m">4096</span><span class="w">                 </span><span class="m">4</span>.37<span class="w">                </span><span class="m">14</span>.71<span class="w">                 </span><span class="m">5</span>.25
+<span class="m">8192</span><span class="w">                 </span><span class="m">3</span>.48<span class="w">                </span><span class="m">27</span>.43<span class="w">                 </span><span class="m">7</span>.15
+<span class="m">16384</span><span class="w">                </span><span class="m">5</span>.48<span class="w">                </span><span class="m">53</span>.14<span class="w">                </span><span class="m">11</span>.37
+<span class="m">32768</span><span class="w">                </span><span class="m">9</span>.43<span class="w">               </span><span class="m">107</span>.36<span class="w">                </span><span class="m">19</span>.00
+<span class="m">65536</span><span class="w">               </span><span class="m">15</span>.92<span class="w">               </span><span class="m">205</span>.86<span class="w">                </span><span class="m">34</span>.18
+<span class="m">131072</span><span class="w">              </span><span class="m">28</span>.89<span class="w">               </span><span class="m">415</span>.82<span class="w">                </span><span class="m">65</span>.70
+<span class="m">262144</span><span class="w">              </span><span class="m">55</span>.15<span class="w">               </span><span class="m">849</span>.62<span class="w">               </span><span class="m">132</span>.38
+<span class="m">524288</span><span class="w">             </span><span class="m">107</span>.83<span class="w">               </span><span class="m">385</span>.97<span class="w">               </span><span class="m">122</span>.73
+<span class="m">1048576</span><span class="w">            </span><span class="m">169</span>.50<span class="w">               </span><span class="m">780</span>.35<span class="w">               </span><span class="m">239</span>.25
+</code></pre></div>
+</div>
+<h2 id="id12">参考资料<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>OSU Benchmarks <a class="reference external" href="http://mvapich.cse.ohio-state.edu/benchmarks/">http://mvapich.cse.ohio-state.edu/benchmarks/</a></p></li>
+<li><p>DOWNLOAD, COMPILE AND RUN THE OSU BENCHMARK on AWS <a class="reference external" href="https://www.hpcworkshops.com/07-efa/04-complie-run-osu.html">https://www.hpcworkshops.com/07-efa/04-complie-run-osu.html</a></p></li>
+</ul>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="hpl.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: HPL" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              HPL
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="hpcg.html" class="md-footer__link md-footer__link--next" aria-label="Next: HPCG" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              HPCG
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>

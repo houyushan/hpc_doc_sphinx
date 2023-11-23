@@ -1,0 +1,2694 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.png">
+    
+    
+      
+        <title>BatVI - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BatVI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/index.html" class="md-nav__link">
+        <span class="md-ellipsis">可视化平台</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transport/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文件系统与数据访问</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../index.html"><span class="md-ellipsis">软件</span></a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">软件</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module.html" class="md-nav__link">
+        <span class="md-ellipsis">软件模块使用方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compilers_and_languages/index.html" class="md-nav__link">
+        <span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchtools/index.html" class="md-nav__link">
+        <span class="md-ellipsis">基准测试</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/index.html" class="md-nav__link">
+        <span class="md-ellipsis">AI 计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineeringscience/index.html" class="md-nav__link">
+        <span class="md-ellipsis">原子分子工程计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">生物信息计算</span></a>
+          
+            <label for="__nav_10_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="生物信息计算" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_6">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">生物信息计算</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="alphafold2.html" class="md-nav__link">
+        <span class="md-ellipsis">Alpha<wbr>Fold2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="augustus.html" class="md-nav__link">
+        <span class="md-ellipsis">AUGUSTUS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aspera.html" class="md-nav__link">
+        <span class="md-ellipsis">Aspera</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basil-anise.html" class="md-nav__link">
+        <span class="md-ellipsis">BASIL-<wbr>ANISE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">Bat<wbr>VI</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">Bat<wbr>VI</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:安装 (reference label)" class="md-ellipsis">安装</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:通过conda安装 (reference label)" class="md-ellipsis">通过conda安装</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:通过链接下载 (reference label)" class="md-ellipsis">通过链接下载</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:使用与范例 (reference label)" class="md-ellipsis">使用与范例</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用与范例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:configuration file (reference label)" class="md-ellipsis">CONFIGURATION FILE</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-program" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:running the program (reference label)" class="md-ellipsis">RUNNING THE PROGRAM</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RUNNING THE PROGRAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:准备输入文件 (reference label)" class="md-ellipsis">准备输入文件</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id7" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:病毒整合脚本 (reference label)" class="md-ellipsis">病毒整合脚本</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-files-and-format" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:output files and format (reference label)" class="md-ellipsis">OUTPUT FILES AND FORMAT</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OUTPUT FILES AND FORMAT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-hits-txt" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:final_hits.txt (reference label)" class="md-ellipsis">final_<wbr>hits.<wbr>txt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictions-opt-subopt-txt" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:predictions.opt.subopt.txt (reference label)" class="md-ellipsis">predictions.<wbr>opt.<wbr>subopt.<wbr>txt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xxx-predictionsx-msa-txt" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:xxx.predictionsx.msa.txt (reference label)" class="md-ellipsis">XXX.<wbr>predictionsx.<wbr>msa.<wbr>txt</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:范例下载 (reference label)" class="md-ellipsis">范例下载</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:注意事项 (reference label)" class="md-ellipsis">注意事项</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:参考 (reference label)" class="md-ellipsis">参考</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bcftools.html" class="md-nav__link">
+        <span class="md-ellipsis">BCFtools</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bedtools2.html" class="md-nav__link">
+        <span class="md-ellipsis">BEDTOOLS2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bicseq2.html" class="md-nav__link">
+        <span class="md-ellipsis">BICseq2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bismark.html" class="md-nav__link">
+        <span class="md-ellipsis">Bismark</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blast-plus.html" class="md-nav__link">
+        <span class="md-ellipsis">Blast-<wbr>plus</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bowtie.html" class="md-nav__link">
+        <span class="md-ellipsis">BOWTIE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bowtie2.html" class="md-nav__link">
+        <span class="md-ellipsis">BOWTIE2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="breakdancer.html" class="md-nav__link">
+        <span class="md-ellipsis">Break<wbr>Dancer</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bwa.html" class="md-nav__link">
+        <span class="md-ellipsis">BWA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ccmpred.html" class="md-nav__link">
+        <span class="md-ellipsis">CCMpred</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cd-hit.html" class="md-nav__link">
+        <span class="md-ellipsis">cd-<wbr>hit</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cdo.html" class="md-nav__link">
+        <span class="md-ellipsis">CDO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="celldex.html" class="md-nav__link">
+        <span class="md-ellipsis">celldex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cellphonedb.html" class="md-nav__link">
+        <span class="md-ellipsis">Cell<wbr>Phone<wbr>DB</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cdsapi.html" class="md-nav__link">
+        <span class="md-ellipsis">cdsapi</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clever.html" class="md-nav__link">
+        <span class="md-ellipsis">CLEVER</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cnvkit.html" class="md-nav__link">
+        <span class="md-ellipsis">CNVkit</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cnvnator.html" class="md-nav__link">
+        <span class="md-ellipsis">CNVnator</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="control-freec.html" class="md-nav__link">
+        <span class="md-ellipsis">Control-<wbr>FERRC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="colabfold.html" class="md-nav__link">
+        <span class="md-ellipsis">Colab<wbr>Fold</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crest.html" class="md-nav__link">
+        <span class="md-ellipsis">CREST</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cufflinks.html" class="md-nav__link">
+        <span class="md-ellipsis">CUFFLINKS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chimera.html" class="md-nav__link">
+        <span class="md-ellipsis">chimera</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deepgo.html" class="md-nav__link">
+        <span class="md-ellipsis">Deep<wbr>Go</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deepvariant.html" class="md-nav__link">
+        <span class="md-ellipsis">Deep<wbr>Variant</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="delly.html" class="md-nav__link">
+        <span class="md-ellipsis">DELLY</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deseq2.html" class="md-nav__link">
+        <span class="md-ellipsis">DESeq2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doubletfinder.html" class="md-nav__link">
+        <span class="md-ellipsis">Doublet<wbr>Finder</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="erds.html" class="md-nav__link">
+        <span class="md-ellipsis">ERDS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fastqc.html" class="md-nav__link">
+        <span class="md-ellipsis">Fast<wbr>QC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fermikit.html" class="md-nav__link">
+        <span class="md-ellipsis">Fermi<wbr>Kit</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fsl.html" class="md-nav__link">
+        <span class="md-ellipsis">FSL</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gatk.html" class="md-nav__link">
+        <span class="md-ellipsis">GATK</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geant4.html" class="md-nav__link">
+        <span class="md-ellipsis">GEANT4</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="genomestrip.html" class="md-nav__link">
+        <span class="md-ellipsis">Genome<wbr>Strip</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gmap-gsnap.html" class="md-nav__link">
+        <span class="md-ellipsis">GMAP-<wbr>GSNAP</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graphmap.html" class="md-nav__link">
+        <span class="md-ellipsis">GRAPHMAP</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gridss.html" class="md-nav__link">
+        <span class="md-ellipsis">GRIDSS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gsutil.html" class="md-nav__link">
+        <span class="md-ellipsis">Gs<wbr>Util</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="harmony.html" class="md-nav__link">
+        <span class="md-ellipsis">Harmony</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hisat2.html" class="md-nav__link">
+        <span class="md-ellipsis">HISAT2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hmmer.html" class="md-nav__link">
+        <span class="md-ellipsis">HMMER</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydra-sv.html" class="md-nav__link">
+        <span class="md-ellipsis">Hydra-<wbr>sv</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="km.html" class="md-nav__link">
+        <span class="md-ellipsis">km</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lumpy-sv.html" class="md-nav__link">
+        <span class="md-ellipsis">LUMPY-<wbr>SV</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lumpy.html" class="md-nav__link">
+        <span class="md-ellipsis">Lumpy</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="maker.html" class="md-nav__link">
+        <span class="md-ellipsis">MAKER</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="manta.html" class="md-nav__link">
+        <span class="md-ellipsis">Manta</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="megahit.html" class="md-nav__link">
+        <span class="md-ellipsis">MEGAHIT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="melt.html" class="md-nav__link">
+        <span class="md-ellipsis">MELT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metasv.html" class="md-nav__link">
+        <span class="md-ellipsis">Meta<wbr>SV</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metis.html" class="md-nav__link">
+        <span class="md-ellipsis">METIS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mfuzz.html" class="md-nav__link">
+        <span class="md-ellipsis">Mfuzz</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mindthegap.html" class="md-nav__link">
+        <span class="md-ellipsis">Mind<wbr>The<wbr>Gap</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mobster.html" class="md-nav__link">
+        <span class="md-ellipsis">Mobster</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="monocle3.html" class="md-nav__link">
+        <span class="md-ellipsis">Monocle 3</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mrbayes.html" class="md-nav__link">
+        <span class="md-ellipsis">Mr<wbr>Bayes</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ncbi-rmblastn.html" class="md-nav__link">
+        <span class="md-ellipsis">NCBI-<wbr>RMBLASTN</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openslide-python.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>Slide-<wbr>python</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pandas.html" class="md-nav__link">
+        <span class="md-ellipsis">pandas</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pbsv.html" class="md-nav__link">
+        <span class="md-ellipsis">PBSV</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pga.html" class="md-nav__link">
+        <span class="md-ellipsis">PGA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="percolate.html" class="md-nav__link">
+        <span class="md-ellipsis">PERCOLATOR</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picard.html" class="md-nav__link">
+        <span class="md-ellipsis">PICARD</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pindel.html" class="md-nav__link">
+        <span class="md-ellipsis">Pindel</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="prism.html" class="md-nav__link">
+        <span class="md-ellipsis">PRISM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="r-rgl.html" class="md-nav__link">
+        <span class="md-ellipsis">r-<wbr>rgl</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="relion.html" class="md-nav__link">
+        <span class="md-ellipsis">RELION</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="retroseq.html" class="md-nav__link">
+        <span class="md-ellipsis">Retro<wbr>Seq</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rfdiffusion.html" class="md-nav__link">
+        <span class="md-ellipsis">RFdiffusion</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rna-seqc.html" class="md-nav__link">
+        <span class="md-ellipsis">RNA-<wbr>SEQC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rosettafold.html" class="md-nav__link">
+        <span class="md-ellipsis">Rose<wbr>TTAFold</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="salmon.html" class="md-nav__link">
+        <span class="md-ellipsis">SALMON</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="samtools.html" class="md-nav__link">
+        <span class="md-ellipsis">Samtools</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="seurat.html" class="md-nav__link">
+        <span class="md-ellipsis">Seurat</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sniffles.html" class="md-nav__link">
+        <span class="md-ellipsis">Sniffles</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soapdenovo2.html" class="md-nav__link">
+        <span class="md-ellipsis">SOAPDENOVO2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sra-tools.html" class="md-nav__link">
+        <span class="md-ellipsis">sra-<wbr>tools</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sratoolkit.html" class="md-nav__link">
+        <span class="md-ellipsis">SRATOOLKIT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="star-fusion.html" class="md-nav__link">
+        <span class="md-ellipsis">STAR-<wbr>Fusion</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stringtie.html" class="md-nav__link">
+        <span class="md-ellipsis">STRINGTIE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="strique.html" class="md-nav__link">
+        <span class="md-ellipsis">STRique</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sv2.html" class="md-nav__link">
+        <span class="md-ellipsis">SV2</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="svaba.html" class="md-nav__link">
+        <span class="md-ellipsis">Sv<wbr>ABA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="svdetect.html" class="md-nav__link">
+        <span class="md-ellipsis">SVDetect</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tophat.html" class="md-nav__link">
+        <span class="md-ellipsis">TOPHAT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vardictjava.html" class="md-nav__link">
+        <span class="md-ellipsis">VARDICTJAVA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variationhunter.html" class="md-nav__link">
+        <span class="md-ellipsis">Variation<wbr>Hunter</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vsearch.html" class="md-nav__link">
+        <span class="md-ellipsis">VSEARCH</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wgcna.html" class="md-nav__link">
+        <span class="md-ellipsis">WGCNA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wham.html" class="md-nav__link">
+        <span class="md-ellipsis">Wham</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rosetta.html" class="md-nav__link">
+        <span class="md-ellipsis">Rosetta</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hic_breakfinder.html" class="md-nav__link">
+        <span class="md-ellipsis">Hic_<wbr>breakfinder</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="star.html" class="md-nav__link">
+        <span class="md-ellipsis">STAR</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="easyfuse.html" class="md-nav__link">
+        <span class="md-ellipsis">Easy<wbr>Fuse</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metawrap.html" class="md-nav__link">
+        <span class="md-ellipsis">Meta<wbr>WRAP</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gate.html" class="md-nav__link">
+        <span class="md-ellipsis">GATE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pangenie.html" class="md-nav__link">
+        <span class="md-ellipsis">pangenie</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:安装 (reference label)" class="md-ellipsis">安装</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:通过conda安装 (reference label)" class="md-ellipsis">通过conda安装</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:通过链接下载 (reference label)" class="md-ellipsis">通过链接下载</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:使用与范例 (reference label)" class="md-ellipsis">使用与范例</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用与范例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:configuration file (reference label)" class="md-ellipsis">CONFIGURATION FILE</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-program" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:running the program (reference label)" class="md-ellipsis">RUNNING THE PROGRAM</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RUNNING THE PROGRAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:准备输入文件 (reference label)" class="md-ellipsis">准备输入文件</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id7" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:病毒整合脚本 (reference label)" class="md-ellipsis">病毒整合脚本</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-files-and-format" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:output files and format (reference label)" class="md-ellipsis">OUTPUT FILES AND FORMAT</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OUTPUT FILES AND FORMAT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-hits-txt" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:final_hits.txt (reference label)" class="md-ellipsis">final_<wbr>hits.<wbr>txt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictions-opt-subopt-txt" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:predictions.opt.subopt.txt (reference label)" class="md-ellipsis">predictions.<wbr>opt.<wbr>subopt.<wbr>txt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xxx-predictionsx-msa-txt" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:xxx.predictionsx.msa.txt (reference label)" class="md-ellipsis">XXX.<wbr>predictionsx.<wbr>msa.<wbr>txt</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:范例下载 (reference label)" class="md-ellipsis">范例下载</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:注意事项 (reference label)" class="md-ellipsis">注意事项</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="app/bioinformatics/batvi:参考 (reference label)" class="md-ellipsis">参考</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="batvi"><span id="id1"></span>BatVI<a class="headerlink" href="#batvi" title="Permalink to this heading">¶</a></h1>
+<h2 id="id2">简介<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>检测病毒整合的软件包</p>
+<h2 id="id3">安装<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h3 id="conda">通过conda安装<a class="headerlink" href="#conda" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>miniconda3
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>mypy<span class="w"> </span><span class="c1">#创建环境</span>
+<span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>mypy<span class="w"> </span><span class="c1">#进入环境</span>
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>batvi<span class="w"> </span><span class="c1">#安装BatVI</span>
+</code></pre></div>
+</div>
+<h3 id="id4">通过链接下载<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://www.comp.nus.edu.sg/~bioinfo/batvi/batvi1.03.tar.gz">https://www.comp.nus.edu.sg/~bioinfo/batvi/batvi1.03.tar.gz</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1">#解压</span>
+tar<span class="w"> </span>-zxvf<span class="w"> </span>batvi1.00.tar.gz
+<span class="nb">cd</span><span class="w"> </span>batvi1.00
+./build.sh
+</code></pre></div>
+</div>
+<h2 id="id5">使用与范例<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<h3 id="configuration-file">CONFIGURATION FILE<a class="headerlink" href="#configuration-file" title="Permalink to this heading">¶</a></h3>
+<p>在BatVI目录下，创建名为 batviconfig.txt 的文件，文件中的内容如下:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">INDEX</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_pathogen_batmis_index<span class="w"> </span>&gt;
+<span class="nv">PATHOGEN_BLAST_DB</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_pathogen_blast_index<span class="w"> </span>&gt;
+<span class="nv">HG_BLAST_DB</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_human_blast_index<span class="w"> </span>&gt;
+<span class="nv">HG_GENOME</span><span class="o">=</span>&lt;<span class="w"> </span>compressed_human_genome<span class="w"> </span>&gt;
+<span class="nv">HG_BWA</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_human_BWA_index<span class="w"> </span>&gt;
+<span class="nv">PATHOGEN_BWA</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_pathogen_BWA_index<span class="w"> </span>&gt;
+<span class="nv">BLAST_PATH</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_blast_binary<span class="w"> </span>&gt;
+<span class="nv">BWA_PATH</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_BWA_binary<span class="w"> </span>&gt;
+<span class="nv">PICARD_PATH</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_picard_jarfiles<span class="w"> </span>&gt;
+<span class="nv">SAMTOOLS_PATH</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_samtools_binary<span class="w"> </span>&gt;
+<span class="nv">BEDTOOLS_PATH</span><span class="o">=</span>&lt;<span class="w"> </span>path_to_bedtools_binary<span class="w"> </span>&gt;
+</code></pre></div>
+</div>
+<p>batviconfig.txt内容详解如下（可以通过gen_path.sh尝试自动获取路径）:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>INDEX<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>batmis<span class="w"> </span>index<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>virus<span class="w"> </span>database.
+HG_BLAST_DB<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>blast<span class="w"> </span>index<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>virus<span class="w"> </span>database.
+PATHOGEN_BLAST_DB<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>blast<span class="w"> </span>index<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>genome.
+HG_GENOME<span class="w"> </span>contains<span class="w"> </span>a<span class="w"> </span>compressed<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>genome.
+HG_BWA<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>BWA<span class="w"> </span>index<span class="w"> </span>of<span class="w"> </span>human.
+PATHOGEN_BWA<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>BWA<span class="w"> </span>index<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>virus<span class="w"> </span>database.
+BLAST_PATH<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>blast<span class="w"> </span>binary
+BWA_PATH<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>BWA<span class="w"> </span>binary
+PICARD_PATH<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>picard<span class="w"> </span>jarfiles
+SAMTOOLS_PATH<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>samtools<span class="w"> </span>binary
+BEDTOOLS_PATH<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>bedtools<span class="w"> </span>binary
+</code></pre></div>
+</div>
+<p>Example of batviconfig.txt</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1">#This is an example batviconfig.txt file.</span>
+<span class="c1">#Comments can be written preceded by a hash..</span>
+<span class="nv">INDEX</span><span class="o">=</span>/mnt/projects/HBVall/batmis/HBVall.fa
+<span class="nv">PATHOGEN_BLAST_DB</span><span class="o">=</span>/mnt/projects/blast/HBVall/HBVall.fa
+<span class="nv">HG_BLAST_DB</span><span class="o">=</span>/mnt/projects/blast/hg19/hg19.fa
+<span class="nv">HG_GENOME</span><span class="o">=</span>/mnt/projects/hg19/hg19.fa
+<span class="nv">HG_BWA</span><span class="o">=</span>/mnt/projects/bwa/hg19/hg19.fa
+<span class="nv">PATHOGEN_BWA</span><span class="o">=</span>/mnt/projects/bwa/HBVall/HBVall.fa
+<span class="nv">BLAST_PATH</span><span class="o">=</span>/usr/bin
+<span class="nv">BWA_PATH</span><span class="o">=</span>/usr/bin
+<span class="nv">PICARD_PATH</span><span class="o">=</span>/usr/bin/picard/
+<span class="nv">SAMTOOLS_PATH</span><span class="o">=</span>/usr/bin
+<span class="nv">BEDTOOLS_PATH</span><span class="o">=</span>/usr/bin
+</code></pre></div>
+</div>
+<h3 id="running-the-program">RUNNING THE PROGRAM<a class="headerlink" href="#running-the-program" title="Permalink to this heading">¶</a></h3>
+<h4 id="id6">准备输入文件<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h4>
+<ol class="arabic">
+<li><p>pair-ended fastq files</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>A_1.fq
+A_2.fq
+B_1.fq
+B_2.fq
+</code></pre></div>
+</div>
+</li>
+<li><p>filelist.txt</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>A_1.fq<span class="p">;</span>A_2.fq<span class="p">;</span><span class="m">800</span>
+B_1.fq<span class="p">;</span>B_2.fq<span class="p">;</span><span class="m">800</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h4 id="id7">病毒整合脚本<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>call_integratons.sh<span class="w"> </span>&lt;processing_directory&gt;<span class="w"> </span><span class="o">[</span><span class="w"> </span>options<span class="w"> </span><span class="o">]</span>
+
+<span class="c1">#processing_directory必须包含filelist.txt，可以包含batviconfig.txt</span>
+<span class="c1">#options选项</span>
+<span class="c1">#-l|--log  - Name of the log files to write processing information to</span>
+<span class="c1">#-t|--threads  - Number of threads to use</span>
+<span class="c1">#-f|--filterdup - Filter out duplicate reads</span>
+</code></pre></div>
+</div>
+<h3 id="output-files-and-format">OUTPUT FILES AND FORMAT<a class="headerlink" href="#output-files-and-format" title="Permalink to this heading">¶</a></h3>
+<h4 id="final-hits-txt">final_hits.txt<a class="headerlink" href="#final-hits-txt" title="Permalink to this heading">¶</a></h4>
+<p>查看输出文件 final_hits.txt 以确认最佳选择，文件内容详解如下:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>LIB<span class="w"> </span>:<span class="w"> </span>Library<span class="w"> </span>name
+Chr<span class="w"> </span>:<span class="w"> </span>Chromosome<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Human<span class="w"> </span>Pos<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Sign<span class="w"> </span>:<span class="w"> </span>Orientation<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Viral<span class="w"> </span>Sign<span class="w"> </span>:<span class="w"> </span>Orientation<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration
+Viral<span class="w"> </span>Pos<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration
+Read<span class="w"> </span>Count<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>reads<span class="w"> </span>used<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>prediction<span class="w"> </span>of<span class="w"> </span>integration.<span class="w"> </span>If<span class="w"> </span>the<span class="w"> </span>entry<span class="w"> </span>is<span class="w"> </span>marked<span class="w"> </span>MSA,<span class="w"> </span>the<span class="w"> </span>integration<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>found<span class="w"> </span>using<span class="w"> </span>assembly.
+Split<span class="w"> </span>Reads<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>split<span class="w"> </span>reads<span class="w"> </span>involved<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>predicion<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>integration.<span class="w"> </span>A<span class="w"> </span>higher<span class="w"> </span>number<span class="w"> </span>indicreases<span class="w"> </span>the<span class="w"> </span>confidence<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>prediction.
+Uniquely<span class="w"> </span>Mapped<span class="w"> </span>Reads<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>unique<span class="w"> </span>mappings<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>genome<span class="w"> </span>involved<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>prediction.<span class="w"> </span>A<span class="w"> </span>higher<span class="w"> </span>number<span class="w"> </span>increases<span class="w"> </span>the<span class="w"> </span>confidence<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>prediction.
+Multiply<span class="w"> </span>Mapped<span class="w"> </span>Reads<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>multiple<span class="w"> </span>mappings<span class="w"> </span>used<span class="w"> </span><span class="k">in</span><span class="w"> </span>predicting<span class="w"> </span>the<span class="w"> </span>integration.
+Rank1<span class="w"> </span>Hits<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>reads<span class="w"> </span>which<span class="w"> </span>have<span class="w"> </span>the<span class="w"> </span>tophit<span class="w"> </span>near<span class="w"> </span>the<span class="w"> </span>prediction.<span class="w"> </span>A<span class="w"> </span>higher<span class="w"> </span>number<span class="w"> </span>increases<span class="w"> </span>the<span class="w"> </span>confidence<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>prediction.<span class="w"> </span>The<span class="w"> </span>last<span class="w"> </span>two<span class="w"> </span>columns<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>file<span class="w"> </span>are<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>ignored<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>BatVI.
+</code></pre></div>
+</div>
+<h4 id="predictions-opt-subopt-txt">predictions.opt.subopt.txt<a class="headerlink" href="#predictions-opt-subopt-txt" title="Permalink to this heading">¶</a></h4>
+<p>在文件 predictions.opt.subopt.txt 中查看所有候选位点，predictions.opt.subopt.txt详解如下:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>Sign<span class="w"> </span>:<span class="w"> </span>Orientation<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Chr<span class="w"> </span>:<span class="w"> </span>Chromosome<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Human<span class="w"> </span>St<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Human<span class="w"> </span>Ed<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration<span class="w"> </span>found<span class="w"> </span>by<span class="w"> </span>reads
+Viral<span class="w"> </span>Sign<span class="w"> </span>:<span class="w"> </span>Orientation<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration
+Viral<span class="w"> </span>St<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration
+Viral<span class="w"> </span>Ed<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration<span class="w"> </span>found<span class="w"> </span>by<span class="w"> </span>reads
+Median_Rank<span class="w"> </span>:<span class="w"> </span>Median<span class="w"> </span>rank<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>prediction
+Read<span class="w"> </span>Count<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>reads<span class="w"> </span>used<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>prediction<span class="w"> </span>of<span class="w"> </span>integration.
+Split<span class="w"> </span>Reads<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>split<span class="w"> </span>reads<span class="w"> </span>involved<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>predicion<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>integration.
+Uniquely<span class="w"> </span>Mapped<span class="w"> </span>Reads<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>unique<span class="w"> </span>mappings<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>genome<span class="w"> </span>involved<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>prediction.
+Multiply<span class="w"> </span>Mapped<span class="w"> </span>Reads<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>multiple<span class="w"> </span>mappings<span class="w"> </span>used<span class="w"> </span><span class="k">in</span><span class="w"> </span>predicting<span class="w"> </span>the<span class="w"> </span>integration.
+Rank1<span class="w"> </span>Hits<span class="w"> </span>:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>reads<span class="w"> </span>which<span class="w"> </span>have<span class="w"> </span>the<span class="w"> </span>tophit<span class="w"> </span>near<span class="w"> </span>the<span class="w"> </span>prediction.<span class="w"> </span>The<span class="w"> </span>other<span class="w"> </span>columns<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>file<span class="w"> </span>are<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>ignored<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>BatVI.
+</code></pre></div>
+</div>
+<h4 id="xxx-predictionsx-msa-txt">XXX.predictionsx.msa.txt<a class="headerlink" href="#xxx-predictionsx-msa-txt" title="Permalink to this heading">¶</a></h4>
+<p>在 tmp.batvi/XXX.predictionsx.msa.txt 中查看（XXX即fastq文件所在目录的名称），文件详解如下:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>Chr<span class="w"> </span>:<span class="w"> </span>Chromosome<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Human<span class="w"> </span>Pos<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Sign<span class="w"> </span>:<span class="w"> </span>Orientation<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>human<span class="w"> </span>integration
+Viral<span class="w"> </span>Pos<span class="w"> </span>:<span class="w"> </span>Location<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration
+Viral<span class="w"> </span>Sign<span class="w"> </span>:<span class="w"> </span>Orientation<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>viral<span class="w"> </span>integration
+Integration<span class="w"> </span><span class="nb">type</span><span class="w"> </span>:<span class="w"> </span>If<span class="w"> </span>the<span class="w"> </span>entry<span class="w"> </span>is<span class="w"> </span>marked<span class="w"> </span>TOPHIT,<span class="w"> </span>the<span class="w"> </span>assembly<span class="w"> </span>maps<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>location<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>best<span class="w"> </span>hit.<span class="w"> </span>If<span class="w"> </span>the<span class="w"> </span>entry<span class="w"> </span>is<span class="w"> </span>marked<span class="w"> </span>REPEAT,<span class="w"> </span>the<span class="w"> </span>assembly<span class="w"> </span>can<span class="w"> </span>map<span class="w"> </span>to<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>other<span class="w"> </span>location<span class="w"> </span>with<span class="w"> </span>similar<span class="w"> </span>confidence,<span class="w"> </span>and<span class="w"> </span>is<span class="w"> </span>therefore<span class="w"> </span>ambiguous.
+</code></pre></div>
+</div>
+<h3 id="id8">范例下载<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
+<p>Example数据下载可使用网址: biogpu.ddns.comp.nus.edu.sg/~ksung/batvi/test</p>
+<div class="line-block">
+<div class="line">There is a set of test fastq files in the test directory (biogpu.ddns.comp.nus.edu.sg/~ksung/batvi/test).
+The filelist.txt file is already present.
+To run a test, a HBV database fasta file is given in HBVall.fa.
+You can download the hg19 fasta file from UCSC genome browser.
+After you run the program on this data set, the expected output is given in expected.txt.</div>
+</div>
+<h3 id="id9">注意事项<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Please ensure that the white spaces in the fasta files and genome names are removed or replaces with a character like an underscore.</p></li>
+<li><p>The index builder bwtformatdb might crash with a message like “Building cached SA index… xxxx/build_index: 47 line: 168087 Segmentation fault (core dump) ….”. This is OK as the required indexes would have already been built at this stage.</p></li>
+<li><p>The installation can be cleaned using the command ‘build.sh clean ‘.</p></li>
+<li><p>A directory can be prepared for a fresh run of BatVI with the command ‘clean_run.sh ‘.</p></li>
+</ul>
+<h2 id="id10">参考<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>BatVI official website: <a class="reference external" href="https://www.comp.nus.edu.sg/~bioinfo/batvi/index.html">https://www.comp.nus.edu.sg/~bioinfo/batvi/index.html</a></p></li>
+<li><p>Tennakoon C, Sung WK. BATVI: Fast, sensitive and accurate detection of virus integrations. BMC Bioinformatics. 2017;18(Suppl 3):71. Published 2017 Mar 14. doi:10.1186/s12859-017-1470-x</p></li>
+</ul>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="basil-anise.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: BASIL-ANISE" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              BASIL-ANISE
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="bcftools.html" class="md-footer__link md-footer__link--next" aria-label="Next: BCFtools" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              BCFtools
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>

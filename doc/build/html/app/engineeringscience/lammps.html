@@ -1,0 +1,2133 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.png">
+    
+    
+      
+        <title>LAMMPS - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LAMMPS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/index.html" class="md-nav__link">
+        <span class="md-ellipsis">可视化平台</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transport/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文件系统与数据访问</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../index.html"><span class="md-ellipsis">软件</span></a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">软件</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module.html" class="md-nav__link">
+        <span class="md-ellipsis">软件模块使用方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compilers_and_languages/index.html" class="md-nav__link">
+        <span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchtools/index.html" class="md-nav__link">
+        <span class="md-ellipsis">基准测试</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/index.html" class="md-nav__link">
+        <span class="md-ellipsis">AI 计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">原子分子工程计算</span></a>
+          
+            <label for="__nav_10_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="原子分子工程计算" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">原子分子工程计算</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="abinit.html" class="md-nav__link">
+        <span class="md-ellipsis">ABINIT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="amber.html" class="md-nav__link">
+        <span class="md-ellipsis">Amber</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basilisk.html" class="md-nav__link">
+        <span class="md-ellipsis">Basilisk</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calculix.html" class="md-nav__link">
+        <span class="md-ellipsis">Calculix</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cantera.html" class="md-nav__link">
+        <span class="md-ellipsis">Cantera</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="casm.html" class="md-nav__link">
+        <span class="md-ellipsis">CASM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cesm.html" class="md-nav__link">
+        <span class="md-ellipsis">CESM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cp2k.html" class="md-nav__link">
+        <span class="md-ellipsis">CP2k</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cplex.html" class="md-nav__link">
+        <span class="md-ellipsis">cplex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gerris.html" class="md-nav__link">
+        <span class="md-ellipsis">Gerris</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gnuplot.html" class="md-nav__link">
+        <span class="md-ellipsis">gnuplot</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gaussian.html" class="md-nav__link">
+        <span class="md-ellipsis">GAUSSIAN</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gromacs.html" class="md-nav__link">
+        <span class="md-ellipsis">GROMACS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">LAMMPS</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">LAMMPS</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:专题培训 (reference label)" class="md-ellipsis">专题培训</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:可用的版本 (reference label)" class="md-ellipsis">可用的版本</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:集群上的 lammps (reference label)" class="md-ellipsis">集群上的 LAMMPS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="思源一号 lammps (reference label)" class="md-ellipsis">一.<wbr> 思源一号 LAMMPS</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一. 思源一号 LAMMPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:1. 全局部署版本 (reference label)" class="md-ellipsis">1.<wbr> 全局部署版本</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:2. 自行编译 lammps (reference label)" class="md-ellipsis">2.<wbr> 自行编译 LAMMPS</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="π2.0 lammps (reference label)" class="md-ellipsis">二.<wbr> π2.<wbr>0 LAMMPS</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二. π2.0 LAMMPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intel" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:1. intel编译器部署的版本 (reference label)" class="md-ellipsis">1.<wbr> Intel编译器部署的版本</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:2. cpu 版本自行编译 (reference label)" class="md-ellipsis">2.<wbr> CPU 版本自行编译</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arm-lammps" class="md-nav__link">
+    <span title="arm lammps (reference label)" class="md-ellipsis">三.<wbr> ARM LAMMPS</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三. ARM LAMMPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#armlammps-bisheng-hypermpi" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:1. arm版lammps(bisheng编译器+hypermpi) (reference label)" class="md-ellipsis">1.<wbr> ARM版lammps<wbr>(bisheng编译器+hypermpi)</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id13" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:运行结果(单位为：秒，越低越好) (reference label)" class="md-ellipsis">运行结果<wbr>(单位为：秒，越低越好)</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行结果(单位为：秒，越低越好)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id14" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:思源一号 (reference label)" class="md-ellipsis">思源一号</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id15" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:π2.0 (reference label)" class="md-ellipsis">π2.<wbr>0</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:arm (reference label)" class="md-ellipsis">ARM</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-lj" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:算例内容如下： `in.lj` (reference label)" class="md-ellipsis">算例内容如下： in.<wbr>lj</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id16" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lammps-rbe.html" class="md-nav__link">
+        <span class="md-ellipsis">LAMMPS-<wbr>RBE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nektar.html" class="md-nav__link">
+        <span class="md-ellipsis">Nektar++</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="neper-fepx.html" class="md-nav__link">
+        <span class="md-ellipsis">Neper-<wbr>FEPX</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nwchem.html" class="md-nav__link">
+        <span class="md-ellipsis">NWChem</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="octave.html" class="md-nav__link">
+        <span class="md-ellipsis">Octave</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openRadioss.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>Radioss</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="whiskythc.html" class="md-nav__link">
+        <span class="md-ellipsis">Whisky<wbr>THC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openfoam.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>FOAM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="osiris.html" class="md-nav__link">
+        <span class="md-ellipsis">Osiris</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ovito.html" class="md-nav__link">
+        <span class="md-ellipsis">OVITO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="psi4.html" class="md-nav__link">
+        <span class="md-ellipsis">PSI4</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pysph.html" class="md-nav__link">
+        <span class="md-ellipsis">Py<wbr>SPH</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/paraview.html" class="md-nav__link">
+        <span class="md-ellipsis">Paraview</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quantum-espresso.html" class="md-nav__link">
+        <span class="md-ellipsis">Quantum ESPRESSO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quickpic.html" class="md-nav__link">
+        <span class="md-ellipsis">Quick<wbr>PIC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="siesta.html" class="md-nav__link">
+        <span class="md-ellipsis">SIESTA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="star-ccm.html" class="md-nav__link">
+        <span class="md-ellipsis">STAR-<wbr>CCM+</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sumo.html" class="md-nav__link">
+        <span class="md-ellipsis">SUMO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vasp.html" class="md-nav__link">
+        <span class="md-ellipsis">VASP</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vmd.html" class="md-nav__link">
+        <span class="md-ellipsis">VMD</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wrf.html" class="md-nav__link">
+        <span class="md-ellipsis">WRF</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="elphbolt.html" class="md-nav__link">
+        <span class="md-ellipsis">Elphbolt</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gmx_mmpbsa.html" class="md-nav__link">
+        <span class="md-ellipsis">gmx_<wbr>MMPBSA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cmaq.html" class="md-nav__link">
+        <span class="md-ellipsis">CMAQ</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="thirdorder.html" class="md-nav__link">
+        <span class="md-ellipsis">thirdorder</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gift-bte.html" class="md-nav__link">
+        <span class="md-ellipsis">Gift-<wbr>BTE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="damask.html" class="md-nav__link">
+        <span class="md-ellipsis">DAMSK</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="roms.html" class="md-nav__link">
+        <span class="md-ellipsis">ROMS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="proj.html" class="md-nav__link">
+        <span class="md-ellipsis">PROJ</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gamess.html" class="md-nav__link">
+        <span class="md-ellipsis">GAMESS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deepmd-kit.html" class="md-nav__link">
+        <span class="md-ellipsis">Dee<wbr>PMD-<wbr>kit</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chroma.html" class="md-nav__link">
+        <span class="md-ellipsis">CHROMA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flash.html" class="md-nav__link">
+        <span class="md-ellipsis">FLASH</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="colmap.html" class="md-nav__link">
+        <span class="md-ellipsis">colmap</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pymultinest.html" class="md-nav__link">
+        <span class="md-ellipsis">pymultinest</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lorene.html" class="md-nav__link">
+        <span class="md-ellipsis">LORENE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="boltztrap.html" class="md-nav__link">
+        <span class="md-ellipsis">Boltz<wbr>Tra<wbr>P</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bioinformatics/index.html" class="md-nav__link">
+        <span class="md-ellipsis">生物信息计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:专题培训 (reference label)" class="md-ellipsis">专题培训</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:可用的版本 (reference label)" class="md-ellipsis">可用的版本</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:集群上的 lammps (reference label)" class="md-ellipsis">集群上的 LAMMPS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="思源一号 lammps (reference label)" class="md-ellipsis">一.<wbr> 思源一号 LAMMPS</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一. 思源一号 LAMMPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:1. 全局部署版本 (reference label)" class="md-ellipsis">1.<wbr> 全局部署版本</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:2. 自行编译 lammps (reference label)" class="md-ellipsis">2.<wbr> 自行编译 LAMMPS</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="π2.0 lammps (reference label)" class="md-ellipsis">二.<wbr> π2.<wbr>0 LAMMPS</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二. π2.0 LAMMPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intel" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:1. intel编译器部署的版本 (reference label)" class="md-ellipsis">1.<wbr> Intel编译器部署的版本</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:2. cpu 版本自行编译 (reference label)" class="md-ellipsis">2.<wbr> CPU 版本自行编译</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arm-lammps" class="md-nav__link">
+    <span title="arm lammps (reference label)" class="md-ellipsis">三.<wbr> ARM LAMMPS</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三. ARM LAMMPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#armlammps-bisheng-hypermpi" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:1. arm版lammps(bisheng编译器+hypermpi) (reference label)" class="md-ellipsis">1.<wbr> ARM版lammps<wbr>(bisheng编译器+hypermpi)</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id13" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:运行结果(单位为：秒，越低越好) (reference label)" class="md-ellipsis">运行结果<wbr>(单位为：秒，越低越好)</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行结果(单位为：秒，越低越好)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id14" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:思源一号 (reference label)" class="md-ellipsis">思源一号</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id15" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:π2.0 (reference label)" class="md-ellipsis">π2.<wbr>0</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:arm (reference label)" class="md-ellipsis">ARM</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-lj" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:算例内容如下： `in.lj` (reference label)" class="md-ellipsis">算例内容如下： in.<wbr>lj</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id16" class="md-nav__link">
+    <span title="app/engineeringscience/lammps:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="lammps"><span id="id1"></span>LAMMPS<a class="headerlink" href="#lammps" title="Permalink to this heading">¶</a></h1>
+<h2 id="id2">简介<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>LAMMPS 是大规模原子分子并行计算代码，在原子、分子及介观体系计算中均有重要应用，并行效率高，广泛应用于材料、物理、化学等模拟。</p>
+<h2 id="id3">专题培训<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jbox.sjtu.edu.cn/l/u1bEaN">“交我算” lammps软件编译与使用</a></p></li>
+</ul>
+<h2 id="id4">可用的版本<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>集群</p></th>
+<th class="head"><p>平台</p></th>
+<th class="head"><p>版本</p></th>
+<th class="head"><p>模块名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>思源一号</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>20230328</p></td>
+<td><p>lammps/20230328-intel-2021.4.0-omp</p></td>
+</tr>
+<tr class="row-odd"><td><p>思源一号</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>20220324</p></td>
+<td><p>lammps/20220324-intel-2021.4.0-omp</p></td>
+</tr>
+<tr class="row-even"><td><p>思源一号</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>20210310</p></td>
+<td><p>lammps/20210310-intel-2021.4.0-omp</p></td>
+</tr>
+<tr class="row-odd"><td><p>思源一号</p></td>
+<td><p><img alt="gpu" src="../../_images/gpu-icon.png" /></p></td>
+<td><p>20230802</p></td>
+<td><p>lammps/20230802-intel-2021.4.0-gpu</p></td>
+</tr>
+<tr class="row-even"><td><p>pi 2.0</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>20230328</p></td>
+<td><p>lammps/20230328-intel-2021.4.0-omp</p></td>
+</tr>
+<tr class="row-odd"><td><p>pi 2.0</p></td>
+<td><p><img alt="cpu" src="../../_images/cpu-icon.png" /></p></td>
+<td><p>20220324</p></td>
+<td><p>lammps/20220324-oneapi-2021.4.0</p></td>
+</tr>
+<tr class="row-even"><td><p>kunpeng</p></td>
+<td><p><img alt="arm" src="../../_images/arm-icon.png" /></p></td>
+<td><p>20190605</p></td>
+<td><p>lammps/bisheng-1.3.3-lammps-2019</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="id5">集群上的 LAMMPS<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id6">思源一号 LAMMPS</a></p></li>
+<li><p><a class="reference internal" href="#id10">π2.0 LAMMPS</a></p></li>
+<li><p><a class="reference internal" href="#arm-lammps">ARM LAMMPS</a></p></li>
+</ul>
+<h2 id="id6"><span id="id7"></span>一. 思源一号 LAMMPS<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<h3 id="id8">1. 全局部署版本<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
+<p>本版本支持 intel 加速。对于大部分势函数（eam, lj 等），均推荐使用 intel 加速，计算速度可提升数倍。具体测评和支持范围请见官方文档：<a class="reference external" href="https://docs.lammps.org/Speed_intel.html">LAMMPS INTEL package</a></p>
+<p>使用 intel 加速的 slurm 脚本示例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=lmp_test</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -N 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=64</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>lammps/20230328-intel-2021.4.0-omp
+
+mpirun<span class="w"> </span>lmp<span class="w"> </span>-pk<span class="w"> </span>intel<span class="w"> </span><span class="m">0</span><span class="w"> </span>omp<span class="w"> </span><span class="m">2</span><span class="w"> </span>-sf<span class="w"> </span>intel<span class="w"> </span>-i<span class="w"> </span><span class="k">in</span>.lj
+</code></pre></div>
+</div>
+<p>注意：若体系不支持 intel package，请使用如下 slurm 脚本：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=lmp_test</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -N 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=64</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>lammps/20230328-intel-2021.4.0-omp
+
+mpirun<span class="w"> </span>lmp<span class="w"> </span>-i<span class="w"> </span><span class="k">in</span>.lj
+</code></pre></div>
+</div>
+<h3 id="id9">2. 自行编译 LAMMPS<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<p>LAMMPS 自行编译十分容易。下面以在思源一号上为例介绍 LAMMPS 安装</p>
+<ol class="loweralpha simple">
+<li><p>申请计算节点资源用来编译 LAMMPS，并请注意在全部编译结束后退出：</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>srun<span class="w"> </span>-p<span class="w"> </span>64c512g<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>--pty<span class="w"> </span>/bin/bash
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>从官网获得最新的 LAMMPS，推荐下载最新的版本</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://lammps.sandia.gov/tars/lammps-stable.tar.gz
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="3">
+<li><p>加载 Intel oneapi 模块：</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>oneapi/2021.4.0
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="4">
+<li><p>编译 (以额外安装 MANYBODY, MEAM, RIGID 和 Intel 加速包为例)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>tar<span class="w"> </span>xvf<span class="w"> </span>lammps-stable.tar.gz
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>lammps-XXXXXX
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>src
+$<span class="w"> </span>make<span class="w">                                            </span><span class="c1">#查看编译选项</span>
+$<span class="w"> </span>make<span class="w"> </span>package<span class="w">                                    </span><span class="c1">#查看可用的包</span>
+$<span class="w"> </span>make<span class="w"> </span>yes-intel<span class="w"> </span>yes-manybody<span class="w"> </span>yes-meam<span class="w"> </span>yes-rigid<span class="w">  </span><span class="c1">#添加所需的包</span>
+$<span class="w"> </span>make<span class="w"> </span>ps<span class="w">                                         </span><span class="c1">#查看计划安装的包列表</span>
+$<span class="w"> </span>make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span><span class="w"> </span>oneapi<span class="w">                            </span><span class="c1">#开始编译</span>
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="5">
+<li><p>环境设置</p></li>
+</ol>
+<p>编译成功后，src 文件夹下将生成可执行文件 lmp_oneapi</p>
+<p>为了便于后续调用，一个简单的方法是将该文件移至 ~/bin 文件夹：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>~/bin
+$<span class="w"> </span>cp<span class="w"> </span>lmp_oneapi<span class="w"> </span>~/bin
+</code></pre></div>
+</div>
+<p>至此安装和设置完成。如下是计算时所需的 slurm 脚本：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=lmp</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -N 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=64</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+
+module<span class="w"> </span>load<span class="w"> </span>oneapi/2021.4.0
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>~/bin:<span class="nv">$PATH</span>
+
+mpirun<span class="w"> </span>lmp_oneapi<span class="w"> </span>-pk<span class="w"> </span>intel<span class="w"> </span><span class="m">0</span><span class="w"> </span>omp<span class="w"> </span><span class="m">2</span><span class="w"> </span>-sf<span class="w"> </span>intel<span class="w"> </span>-i<span class="w"> </span><span class="k">in</span>.lj
+<span class="c1"># 若势函数等体系不支持intel加速，则使用下方语句：</span>
+<span class="c1"># mpirun lmp_oneapi -i in.lj</span>
+</code></pre></div>
+</div>
+<h2 id="id10"><span id="id11"></span>二. π2.0 LAMMPS<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
+<h3 id="intel">1. Intel编译器部署的版本<a class="headerlink" href="#intel" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=lammps_pi</span>
+<span class="c1">#SBATCH --partition=cpu</span>
+<span class="c1">#SBATCH -N 2</span>
+<span class="c1">#SBATCH --ntasks-per-node=40</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+
+module<span class="w"> </span>load<span class="w"> </span>lammps/20230328-intel-2021.4.0-omp
+
+mpirun<span class="w"> </span>lmp<span class="w"> </span>-pk<span class="w"> </span>intel<span class="w"> </span><span class="m">0</span><span class="w"> </span>omp<span class="w"> </span><span class="m">2</span><span class="w"> </span>-sf<span class="w"> </span>intel<span class="w"> </span>-i<span class="w"> </span><span class="k">in</span>.lj
+</code></pre></div>
+</div>
+<h3 id="cpu">2. CPU 版本自行编译<a class="headerlink" href="#cpu" title="Permalink to this heading">¶</a></h3>
+<p>若对 lammps 版本有要求，或需要特定的 package，可自行编译 Intel 版本的
+Lammps. 下面以在 π 集群为例介绍 lammps 的自行安装</p>
+<ol class="loweralpha simple">
+<li><p>从官网下载 lammps，推荐安装最新的稳定版：</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>https://lammps.sandia.gov/tars/lammps-stable.tar.gz
+$<span class="w"> </span>or
+$<span class="w"> </span>cp<span class="w"> </span>/lustre/share/samples/lammps/lammps-stable.tar.gz<span class="w"> </span>./
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>由于登录节点禁止运行作业和并行编译，请申请计算节点资源用来编译
+lammps，并在编译结束后退出：</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>srun<span class="w"> </span>-p<span class="w"> </span>small<span class="w"> </span>-n<span class="w"> </span><span class="m">8</span><span class="w"> </span>--pty<span class="w"> </span>/bin/bash
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="3">
+<li><p>加载 Intel oneapi 模块：</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>oneapi/2021
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="4">
+<li><p>编译 (以额外安装 MANYBODY 和 Intel 加速包为例)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>tar<span class="w"> </span>xvf<span class="w"> </span>lammps-stable.tar.gz
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>lammps-XXXXXX
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>src
+$<span class="w"> </span>make<span class="w">                           </span><span class="c1">#查看编译选项</span>
+$<span class="w"> </span>make<span class="w"> </span>package<span class="w">                   </span><span class="c1">#查看包</span>
+$<span class="w"> </span>make<span class="w"> </span>yes-intel<span class="w">                 </span><span class="c1">#&quot;make yes-&quot;后面接需要安装的 package 名字</span>
+$<span class="w"> </span>make<span class="w"> </span>yes-manybody
+$<span class="w"> </span>make<span class="w"> </span>ps<span class="w">                        </span><span class="c1">#查看计划安装的包列表</span>
+$<span class="w"> </span>make<span class="w"> </span>-j<span class="w"> </span><span class="m">8</span><span class="w"> </span>oneapi<span class="w">    </span><span class="c1">#开始编译</span>
+</code></pre></div>
+</div>
+<ol class="loweralpha simple" start="5">
+<li><p>测试脚本</p></li>
+</ol>
+<p>编译成功后，将在 src 文件夹下生成 lmp_oneapi
+后续调用，请给该文件的路径，比如
+<code class="docutils literal notranslate"><span class="pre">~/lammps-3Mar20/src/lmp_oneapi</span></code>。脚本名称可设为
+slurm.test</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH -J lammps</span>
+<span class="c1">#SBATCH -p cpu</span>
+<span class="c1">#SBATCH -n 40</span>
+<span class="c1">#SBATCH --ntasks-per-node=40</span>
+<span class="c1">#SBATCH -o %j.out</span>
+<span class="c1">#SBATCH -e %j.err</span>
+
+<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+
+module<span class="w"> </span>load<span class="w"> </span>oneapi/2021
+
+srun<span class="w"> </span>--mpi<span class="o">=</span>pmi2<span class="w"> </span>~/lammps-3Mar20/src/lmp_oneapi<span class="w"> </span>-i<span class="w"> </span><span class="k">in</span>.lj
+</code></pre></div>
+</div>
+<h2 id="arm-lammps"><span id="id12"></span>三. ARM LAMMPS<a class="headerlink" href="#arm-lammps" title="Permalink to this heading">¶</a></h2>
+<h3 id="armlammps-bisheng-hypermpi">1. ARM版lammps(bisheng编译器+hypermpi)<a class="headerlink" href="#armlammps-bisheng-hypermpi" title="Permalink to this heading">¶</a></h3>
+<p>脚本如下(lammps.slurm):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=lammps</span>
+<span class="c1">#SBATCH --partition=arm128c256g</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=96</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>lammps/bisheng-1.3.3-lammps-2019
+mpirun<span class="w"> </span>-x<span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>lmp_aarch64_arm_hypermpi<span class="w"> </span>-in<span class="w"> </span><span class="k">in</span>.lj
+</code></pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>sbatch<span class="w"> </span>lammps.slurm
+</code></pre></div>
+</div>
+<h2 id="id13">运行结果(单位为：秒，越低越好)<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h2>
+<h3 id="id14">思源一号<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="4"><p>lammps/20230328-intel-2021.4.0-omp</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>核数</p></td>
+<td><p>64</p></td>
+<td><p>128</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wall time</p></td>
+<td><p>0:01:57</p></td>
+<td><p>0:01:01</p></td>
+<td><p>0:00:46</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="id15">π2.0<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="4"><p>lammps/20230328-intel-2021.4.0-omp</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>核数</p></td>
+<td><p>40</p></td>
+<td><p>80</p></td>
+<td><p>120</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wall time</p></td>
+<td><p>0:03:16</p></td>
+<td><p>0:01:35</p></td>
+<td><p>0:01:06</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm">ARM<a class="headerlink" href="#arm" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>lammps/bisheng-1.3.3-lammps-2019</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>核数</p></td>
+<td><p>64</p></td>
+<td><p>96</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wall time</p></td>
+<td><p>0:07:26</p></td>
+<td><p>0:04:43</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="in-lj">算例内容如下： <cite>in.lj</cite><a class="headerlink" href="#in-lj" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 3d Lennard-Jones melt</span>
+
+variable<span class="w">     </span>x<span class="w"> </span>index<span class="w"> </span><span class="m">4</span>
+variable<span class="w">     </span>y<span class="w"> </span>index<span class="w"> </span><span class="m">4</span>
+variable<span class="w">     </span>z<span class="w"> </span>index<span class="w"> </span><span class="m">4</span>
+
+variable<span class="w">     </span>xx<span class="w"> </span>equal<span class="w"> </span><span class="m">20</span>*<span class="nv">$x</span>
+variable<span class="w">     </span>yy<span class="w"> </span>equal<span class="w"> </span><span class="m">20</span>*<span class="nv">$y</span>
+variable<span class="w">     </span>zz<span class="w"> </span>equal<span class="w"> </span><span class="m">20</span>*<span class="nv">$z</span>
+
+units<span class="w">                </span>lj
+atom_style<span class="w">   </span>atomic
+
+lattice<span class="w">              </span>fcc<span class="w"> </span><span class="m">0</span>.8442
+region<span class="w">               </span>box<span class="w"> </span>block<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="si">${</span><span class="nv">xx</span><span class="si">}</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="si">${</span><span class="nv">yy</span><span class="si">}</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="si">${</span><span class="nv">zz</span><span class="si">}</span>
+create_box<span class="w">   </span><span class="m">1</span><span class="w"> </span>box
+create_atoms<span class="w"> </span><span class="m">1</span><span class="w"> </span>box
+mass<span class="w">         </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>.0
+
+velocity<span class="w">     </span>all<span class="w"> </span>create<span class="w"> </span><span class="m">1</span>.44<span class="w"> </span><span class="m">87287</span><span class="w"> </span>loop<span class="w"> </span>geom
+
+pair_style<span class="w">   </span>lj/cut<span class="w"> </span><span class="m">2</span>.5
+pair_coeff<span class="w">   </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>.0<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span><span class="m">2</span>.5
+
+neighbor<span class="w">     </span><span class="m">0</span>.3<span class="w"> </span>bin
+neigh_modify<span class="w"> </span>delay<span class="w"> </span><span class="m">0</span><span class="w"> </span>every<span class="w"> </span><span class="m">20</span><span class="w"> </span>check<span class="w"> </span>no
+
+fix<span class="w">          </span><span class="m">1</span><span class="w"> </span>all<span class="w"> </span>nve
+
+run<span class="w">          </span><span class="m">10000</span>
+</code></pre></div>
+</div>
+<h2 id="id16">参考资料<a class="headerlink" href="#id16" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lammps.sandia.gov/">LAMMPS 官网</a></p></li>
+<li><p><a class="reference external" href="ngc.nvidia.com">NVIDIA GPU CLOUD</a></p></li>
+</ul>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="gromacs.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: GROMACS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              GROMACS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="lammps-rbe.html" class="md-footer__link md-footer__link--next" aria-label="Next: LAMMPS-RBE" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              LAMMPS-RBE
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>

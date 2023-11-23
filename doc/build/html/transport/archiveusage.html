@@ -1,0 +1,885 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../_static/favicon.png">
+    
+    
+      
+        <title>冷存储数据迁移指南 - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              冷存储数据迁移指南
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../studio/index.html" class="md-nav__link">
+        <span class="md-ellipsis">可视化平台</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">文件系统与数据访问</span></a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="文件系统与数据访问" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">文件系统与数据访问</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="datashare.html" class="md-nav__link">
+        <span class="md-ellipsis">交我算主账号、子账号的数据共享</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transportsolution.html" class="md-nav__link">
+        <span class="md-ellipsis">数据传输方案和传输节点</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transportmethod.html" class="md-nav__link">
+        <span class="md-ellipsis">数据传输方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">冷存储数据迁移指南</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">冷存储数据迁移指南</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="transport/archiveusage:数据传输 (reference label)" class="md-ellipsis">数据传输</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="transport/archiveusage:数据校验 (reference label)" class="md-ellipsis">数据校验</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="transport/archiveusage:清理存储空间 (reference label)" class="md-ellipsis">清理存储空间</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transportskills.html" class="md-nav__link">
+        <span class="md-ellipsis">数据传输技巧</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="remoteaccessdata.html" class="md-nav__link">
+        <span class="md-ellipsis">通过远程挂载读写超算平台的数据</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scidatausage.html" class="md-nav__link">
+        <span class="md-ellipsis">科学数据平台使用指南</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/index.html" class="md-nav__link">
+        <span class="md-ellipsis">软件</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="transport/archiveusage:数据传输 (reference label)" class="md-ellipsis">数据传输</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="transport/archiveusage:数据校验 (reference label)" class="md-ellipsis">数据校验</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="transport/archiveusage:清理存储空间 (reference label)" class="md-ellipsis">清理存储空间</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="archiveusage"><span id="id1"></span>冷存储数据迁移指南<a class="headerlink" href="#archiveusage" title="Permalink to this heading">¶</a></h1>
+<p>冷存储系统挂载在 <code class="docutils literal notranslate"><span class="pre">data</span></code> 节点和 <code class="docutils literal notranslate"><span class="pre">sydata</span></code> 节点的 <code class="docutils literal notranslate"><span class="pre">/archive</span></code> 下，可以将不常用的数据转移到冷存储。
+在转移 Pi 超算 <code class="docutils literal notranslate"><span class="pre">/lustre</span></code> 下的数据时，需要选择 data 传输节点，在转移思源一号 <code class="docutils literal notranslate"><span class="pre">/dssg</span></code> 下的数据时，需要选择 sydata 传输节点。
+如果要使用冷存储中的数据，用户需要先将数据手动从冷存储传输到 Lustre/GPFS。</p>
+<h2 id="id2">数据传输<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">rsync</span></code> 支持增量传输、断点续传、文件校验等功能，建议用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 命令拷贝数据。</p>
+<p><strong>使用 tmux 会话</strong></p>
+<p>如果直接在命令行执行数据传输命令，网络不稳定可能导致传输中断，因此建议先开启 tmux 会话，再传输数据。相应的命令为：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 开启会话：在终端输入下面命令，会开启名为 transport 的 tmux 会话</span>
+tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>transport
+
+<span class="c1"># 分离会话：在会话中输入下面命令，会从会话返回终端</span>
+<span class="c1"># 如果会话在执行程序中无法输入命令，先按 Ctrl+B，再按 D</span>
+tmux<span class="w"> </span>detach
+
+<span class="c1"># 查看所有的 tmux 会话</span>
+tmux<span class="w"> </span>ls
+
+<span class="c1"># 回到名为 transport 会话</span>
+tmux<span class="w"> </span>attach<span class="w"> </span>-t<span class="w"> </span>transport
+
+<span class="c1"># 彻底关闭 transport 会话</span>
+tmux<span class="w"> </span>kill-session<span class="w"> </span>-t<span class="w"> </span>transport
+</code></pre></div>
+</div>
+<p><strong>使用 rsync 从 Pi 超算或思源一号向冷存储传输数据</strong></p>
+<p>假设用户 expuser01 需要将 Pi 超算个人目录下的数据 <code class="docutils literal notranslate"><span class="pre">$HOME/data/</span></code> 搬运到冷存储下的个人目录 <code class="docutils literal notranslate"><span class="pre">$ARCHIVE/data/</span></code>，需要执行的命令为：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># -a 表示保存所有元数据，-v 打印更多信息，-r 表示包含子目录，-P 表示显示进展以及保存未传输完的文件，其余可用参数见 rsync 文档</span>
+rsync<span class="w"> </span>-avrP<span class="w"> </span><span class="nv">$HOME</span>/data/<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/
+
+<span class="c1"># 如果要搬运的目录中包含软链接文件，需要用 --copy-unsafe-links 参数，将不安全的软链接（原文件不在备份范围内）转换成实体文件保存</span>
+rsync<span class="w"> </span>-avrP<span class="w"> </span>--copy-unsafe-links<span class="w"> </span><span class="nv">$HOME</span>/data/<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/
+
+<span class="c1"># 如果要搬运的目录中包含硬链接文件，可以用 -H 参数，保留文件之间的硬链接信息，减少不必要的文件传输</span>
+rsync<span class="w"> </span>-avrPH<span class="w"> </span><span class="nv">$HOME</span>/data/<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/
+</code></pre></div>
+</div>
+<p><strong>使用 rsync 从冷存储向 Pi 超算或思源一号传输数据</strong></p>
+<p>假设用户 expuser01 需要将冷存储下的个人目录 <code class="docutils literal notranslate"><span class="pre">$ARCHIVE/data/</span></code> 搬运到 Pi 超算个人目录下的数据 <code class="docutils literal notranslate"><span class="pre">$HOME/data/</span></code>，需要执行的命令为：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># -a 表示保存所有元数据，-v 打印更多信息，-r 表示包含子目录，-P 表示显示进展以及保存未传输完的文件，其余可用参数见 rsync 文档</span>
+rsync<span class="w"> </span>-avrP<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/<span class="w"> </span><span class="nv">$HOME</span>/data/
+
+<span class="c1"># 如果要搬运的目录中包含软链接文件，需要用 --copy-unsafe-links 参数，将不安全的软链接（原文件不在备份范围内）转换成实体文件保存</span>
+rsync<span class="w"> </span>-avrP<span class="w"> </span>--copy-unsafe-links<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/<span class="w"> </span><span class="nv">$HOME</span>/data/
+
+<span class="c1"># 如果要搬运的目录中包含硬链接文件，可以用 -H 参数，保留文件之间的硬链接信息，减少不必要的文件传输</span>
+rsync<span class="w"> </span>-avrPH<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/<span class="w"> </span><span class="nv">$HOME</span>/data/
+</code></pre></div>
+</div>
+<p>在 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 传输完成之后，会出现类似下面的提示信息：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>...
+sent<span class="w"> </span><span class="m">5</span>,244,160,230<span class="w"> </span>bytes<span class="w">  </span>received<span class="w"> </span><span class="m">137</span><span class="w"> </span>bytes<span class="w">  </span><span class="m">48</span>,333,275.27<span class="w"> </span>bytes/sec
+total<span class="w"> </span>size<span class="w"> </span>is<span class="w"> </span><span class="m">5</span>,242,880,013<span class="w">  </span>speedup<span class="w"> </span>is<span class="w"> </span><span class="m">1</span>.00
+</code></pre></div>
+</div>
+<p>如果因为某些原因，导致 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 未正常结束，可以再次用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 命令传输数据，<code class="docutils literal notranslate"><span class="pre">rsync</span></code> 的断点续传功能可以接着上次传输进度继续传输。</p>
+<h2 id="id3">数据校验<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>数据传输可能受网络波动影响，建议在数据传输完成之后，通过数据校验确认数据完整。对于思源一号集群，向冷存储的传输受网络波动影响可能性更大，强烈建议完成数据校验。</p>
+<p>对于少量文件，可以用 md5sum 校验。对于多级目录结构，可以用 md5deep 工具。</p>
+<p><strong>md5deep 校验（推荐）</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">md5deep</span></code> 比 <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> 命令更加丰富，可以递归地检查整个目录树，为子目录中的每个文件生成 md5 值。
+文件的数量和大小会影响 md5 值生成的速度，如遇到这一步耗时较长，请耐心等待。</p>
+<p>假设用户 expuser01 需要为目录 <code class="docutils literal notranslate"><span class="pre">$HOME/data/</span></code> 和 <code class="docutils literal notranslate"><span class="pre">$ARCHIVE/data/</span></code> 下的子目录的每个文件生成 md5 值，需要执行以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 传输之前，对子目录的每个文件生成 md5 值</span>
+md5deep<span class="w"> </span>-rl<span class="w"> </span><span class="nv">$HOME</span>/data/<span class="w"> </span>&gt;<span class="w"> </span>before.md5deep
+
+<span class="c1"># 通过 rsync 传输数据</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># 传输之后，对目录的每个文件生成 md5 值</span>
+md5deep<span class="w"> </span>-rl<span class="w"> </span><span class="nv">$ARCHIVE</span>/data/<span class="w"> </span>&gt;<span class="w"> </span>after.md5deep
+
+<span class="c1"># md5deep 文件的格式为“md5值 文件路径”，比较传输前后的各文件 md5 值需要使用第一列</span>
+sort<span class="w"> </span>before.md5deep<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>before
+sort<span class="w"> </span>after.md5deep<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>after
+diff<span class="w"> </span>before<span class="w"> </span>after
+</code></pre></div>
+</div>
+<p><strong>md5sum 校验</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">md5sum</span></code>
+可以生成文件校验码，来发现文件传输（网络传输、复制、本地不同设备间的传输）异常造成的文件内容不一致的情况。文件的数量和大小会影响 md5 值生成的速度，如遇到这一步耗时较长，请耐心等待。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 传输之前，对 txt 文件生成 md5 校验码</span>
+ls<span class="w"> </span>*.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-i<span class="w"> </span>-P<span class="w"> </span><span class="m">5</span><span class="w"> </span>md5sum<span class="w"> </span><span class="o">{}</span><span class="w"> </span>&gt;<span class="w"> </span>file.md5
+
+<span class="c1"># 通过 rsync 传输</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># 传输之后，生成 md5 校验码</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># 传输完成后，比较传输前后 md5 校验码</span>
+diff<span class="w"> </span>file1.md5<span class="w"> </span>file2.md5
+</code></pre></div>
+</div>
+<h2 id="id4">清理存储空间<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>在完成数据传输、数据校验之后，可以清理原文件占用的存储空间。冷存储一般用于存储不常用的数据，因此建议每次使用前将数据从冷存储传输到 Pi 超算或思源一号，在使用后再清理掉位于 Pi 超算或思源一号的数据。</p>
+<ul class="simple">
+<li><p>如果要清理位于 Pi 超算或思源一号的数据，可以参考以下命令：</p></li>
+</ul>
+<div class="danger admonition">
+<p class="admonition-title">Danger</p>
+<p>下面的命令将直接删除对应路径下所有的内容，删除之后无法恢复数据，请确认路径正确后再执行！</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 假设原文件存储位置在 /lustre/home/acct-exp/expuser01/data/</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>/lustre/home/acct-exp/expuser01/data/
+</code></pre></div>
+</div>
+<ul class="simple">
+<li><p>如果要清理位于冷存储的数据，可以参考以下命令：</p></li>
+</ul>
+<div class="danger admonition">
+<p class="admonition-title">Danger</p>
+<p>下面的命令将直接删除对应路径下所有的内容，删除之后无法恢复数据，请确认路径正确后再执行！</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 假设原文件存储位置在 /archive/home/acct-exp/expuser01/data/</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>/archive/home/acct-exp/expuser01/data/
+</code></pre></div>
+</div>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="transportmethod.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 数据传输方法" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              数据传输方法
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="transportskills.html" class="md-footer__link md-footer__link--next" aria-label="Next: 数据传输技巧" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              数据传输技巧
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>

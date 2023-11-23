@@ -1,0 +1,1902 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../_static/favicon.png">
+    
+    
+      
+        <title>Jupyter - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Jupyter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">可视化平台</span></a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="可视化平台" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">可视化平台</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basic.html" class="md-nav__link">
+        <span class="md-ellipsis">HPC Studio</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rdp.html" class="md-nav__link">
+        <span class="md-ellipsis">远程桌面</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">Jupyter</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">Jupyter</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用预置环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用预置环境</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在 Jupyter 中使用预置环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span title="studio/jupyter:预置 pytorch 环境 (reference label)" class="md-ellipsis">预置 Py<wbr>Torch 环境</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    <span title="studio/jupyter:预置 tensorflow 环境 (reference label)" class="md-ellipsis">预置 Tensor<wbr>Flow 环境</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span title="studio/jupyter:预置 r 环境 (reference label)" class="md-ellipsis">预置 R 环境</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用自定义的环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义的环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-r" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用自定义 r 环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义 R 环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="studio/jupyter:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rstudio.html" class="md-nav__link">
+        <span class="md-ellipsis">RStudio</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="paraview.html" class="md-nav__link">
+        <span class="md-ellipsis">Paraview</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="alphafold-gui.html" class="md-nav__link">
+        <span class="md-ellipsis">Alpha<wbr>Fold-<wbr>GUI</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/matlab.html" class="md-nav__link">
+        <span class="md-ellipsis">MATLAB</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文件系统与数据访问</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../app/index.html"><span class="md-ellipsis">软件</span></a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">软件</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/module.html" class="md-nav__link">
+        <span class="md-ellipsis">软件模块使用方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../app/compilers_and_languages/index.html"><span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span></a>
+          
+            <label for="__nav_10_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="编译器、MPI库、数学库、应用工具" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/gnu.html" class="md-nav__link">
+        <span class="md-ellipsis">GNU Compiler Collection</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/armadillo.html" class="md-nav__link">
+        <span class="md-ellipsis">Armadillo</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/intel.html" class="md-nav__link">
+        <span class="md-ellipsis">Intel Compiler</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/intel_mkl.html" class="md-nav__link">
+        <span class="md-ellipsis">Intel mkl</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/intel_mpi.html" class="md-nav__link">
+        <span class="md-ellipsis">Intel-<wbr>MPI</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/intel_vtune.html" class="md-nav__link">
+        <span class="md-ellipsis">Intel-<wbr>Vtune</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cublas.html" class="md-nav__link">
+        <span class="md-ellipsis">cu<wbr>BLAS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cuda.html" class="md-nav__link">
+        <span class="md-ellipsis">CUDA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cusparse.html" class="md-nav__link">
+        <span class="md-ellipsis">cu<wbr>SPARSE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cusolver.html" class="md-nav__link">
+        <span class="md-ellipsis">cu<wbr>SOLVER</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cufft.html" class="md-nav__link">
+        <span class="md-ellipsis">cu<wbr>FFT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/open_mpi.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>MPI</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/mpi4py.html" class="md-nav__link">
+        <span class="md-ellipsis">Mpi4py</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/numba.html" class="md-nav__link">
+        <span class="md-ellipsis">Numba</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cupy.html" class="md-nav__link">
+        <span class="md-ellipsis">Cupy</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/pycuda.html" class="md-nav__link">
+        <span class="md-ellipsis">Py<wbr>CUDA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/openblas.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>BLAS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/eigen.html" class="md-nav__link">
+        <span class="md-ellipsis">Eigen</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/fftw.html" class="md-nav__link">
+        <span class="md-ellipsis">FFTW</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/gsl.html" class="md-nav__link">
+        <span class="md-ellipsis">GSL</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/hpcsdk.html" class="md-nav__link">
+        <span class="md-ellipsis">NVIDIA HPC SDK</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/hypre.html" class="md-nav__link">
+        <span class="md-ellipsis">Hypre</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/hyper-mpi.html" class="md-nav__link">
+        <span class="md-ellipsis">Hyper-<wbr>MPI</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/bisheng.html" class="md-nav__link">
+        <span class="md-ellipsis">bisheng</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/jdk.html" class="md-nav__link">
+        <span class="md-ellipsis">JDK</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/conda.html" class="md-nav__link">
+        <span class="md-ellipsis">Conda</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/python.html" class="md-nav__link">
+        <span class="md-ellipsis">Python</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/perl.html" class="md-nav__link">
+        <span class="md-ellipsis">PERL</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/r.html" class="md-nav__link">
+        <span class="md-ellipsis">R</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/cmake.html" class="md-nav__link">
+        <span class="md-ellipsis">CMake</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/matlab.html" class="md-nav__link">
+        <span class="md-ellipsis">MATLAB</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__current-nested md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_2_32" type="checkbox" id="__nav_10_2_32" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="#"><span class="md-ellipsis">Jupyter</span></a>
+          
+            <label for="__nav_10_2_32">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Jupyter" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_32">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Jupyter</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_2_32_1" type="checkbox" id="__nav_10_2_32_1" >
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="#id1"><span title="studio/jupyter:在 jupyter 中使用预置环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用预置环境</span></a>
+          
+            <label for="__nav_10_2_32_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="在 Jupyter 中使用预置环境" data-md-level="4">
+        <label class="md-nav__title" for="__nav_10_2_32_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span title="studio/jupyter:在 jupyter 中使用预置环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用预置环境</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#pytorch" class="md-nav__link">
+        <span title="studio/jupyter:预置 pytorch 环境 (reference label)" class="md-ellipsis">预置 Py<wbr>Torch 环境</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#tensorflow" class="md-nav__link">
+        <span title="studio/jupyter:预置 tensorflow 环境 (reference label)" class="md-ellipsis">预置 Tensor<wbr>Flow 环境</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#r" class="md-nav__link">
+        <span title="studio/jupyter:预置 r 环境 (reference label)" class="md-ellipsis">预置 R 环境</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#id2" class="md-nav__link">
+        <span title="studio/jupyter:在 jupyter 中使用自定义的环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义的环境</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#jupyter-r" class="md-nav__link">
+        <span title="studio/jupyter:在 jupyter 中使用自定义 r 环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义 R 环境</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#id3" class="md-nav__link">
+        <span title="studio/jupyter:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+      
+    <li class="md-nav__item md-nav__item--active md-nav__current-toc">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">Jupyter</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">Jupyter</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用预置环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用预置环境</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在 Jupyter 中使用预置环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span title="studio/jupyter:预置 pytorch 环境 (reference label)" class="md-ellipsis">预置 Py<wbr>Torch 环境</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    <span title="studio/jupyter:预置 tensorflow 环境 (reference label)" class="md-ellipsis">预置 Tensor<wbr>Flow 环境</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span title="studio/jupyter:预置 r 环境 (reference label)" class="md-ellipsis">预置 R 环境</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用自定义的环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义的环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-r" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用自定义 r 环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义 R 环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="studio/jupyter:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/glibc.html" class="md-nav__link">
+        <span class="md-ellipsis">glibc</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/spooles.html" class="md-nav__link">
+        <span class="md-ellipsis">SPOOLES</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/dealii.html" class="md-nav__link">
+        <span class="md-ellipsis">Deal.<wbr>II</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/compilers_and_languages/nvitop.html" class="md-nav__link">
+        <span class="md-ellipsis">nvitop</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/benchtools/index.html" class="md-nav__link">
+        <span class="md-ellipsis">基准测试</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/ai/index.html" class="md-nav__link">
+        <span class="md-ellipsis">AI 计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/engineeringscience/index.html" class="md-nav__link">
+        <span class="md-ellipsis">原子分子工程计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/bioinformatics/index.html" class="md-nav__link">
+        <span class="md-ellipsis">生物信息计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用预置环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用预置环境</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在 Jupyter 中使用预置环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span title="studio/jupyter:预置 pytorch 环境 (reference label)" class="md-ellipsis">预置 Py<wbr>Torch 环境</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    <span title="studio/jupyter:预置 tensorflow 环境 (reference label)" class="md-ellipsis">预置 Tensor<wbr>Flow 环境</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span title="studio/jupyter:预置 r 环境 (reference label)" class="md-ellipsis">预置 R 环境</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用自定义的环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义的环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-r" class="md-nav__link">
+    <span title="studio/jupyter:在 jupyter 中使用自定义 r 环境 (reference label)" class="md-ellipsis">在 Jupyter 中使用自定义 R 环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="studio/jupyter:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="jupyter">Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this heading">¶</a></h1>
+<p>Jupyter是一个非营利组织，旨在“为数十种编程语言的交互式计算开发开源软件，开放标准和服务”。2014年由Fernando
+Pérez从IPython中衍生出来，Jupyter支持几十种语言的执行环境。</p>
+<p>Jupyter
+Project的名称是对Jupyter支持的三种核心编程语言的引用，这三种语言是Julia、Python和R，也是对伽利略记录发现木星的卫星的笔记本的致敬。Jupyter项目开发并支持交互式计算产品Jupyter
+Notebook、JupyterHub和JupyterLab，这是Jupyter Notebook的下一代版本。</p>
+<p>登录HPC
+Studio平台后，可以在内置应用中选择<code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>或<code class="docutils literal notranslate"><span class="pre">Jupyer</span> <span class="pre">(GPU)</span></code>，均支持<code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>和<code class="docutils literal notranslate"><span class="pre">JupyterLab</span></code>。</p>
+<h2 id="id1">在 Jupyter 中使用预置环境<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<p>已有三个预置环境，可供用户使用：</p>
+<h3 id="pytorch">预置 PyTorch 环境<a class="headerlink" href="#pytorch" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>环境</p></th>
+<th class="head"><p>版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>python</p></td>
+<td><p>3.8.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>cudatoolkit</p></td>
+<td><p>10.1.243</p></td>
+</tr>
+<tr class="row-even"><td><p>pytorch</p></td>
+<td><p>1.5.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>torchvision</p></td>
+<td><p>0.6.0</p></td>
+</tr>
+<tr class="row-even"><td><p>numpy</p></td>
+<td><p>1.18.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>pandas</p></td>
+<td><p>1.0.4</p></td>
+</tr>
+<tr class="row-even"><td><p>pillow</p></td>
+<td><p>7.1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>scipy</p></td>
+<td><p>1.4.1</p></td>
+</tr>
+<tr class="row-even"><td><p>matplotlib</p></td>
+<td><p>3.2.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>seaborn</p></td>
+<td><p>0.10.1</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tensorflow">预置 TensorFlow 环境<a class="headerlink" href="#tensorflow" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>环境</p></th>
+<th class="head"><p>版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>python</p></td>
+<td><p>3.8.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>cudatoolkit</p></td>
+<td><p>10.1.243</p></td>
+</tr>
+<tr class="row-even"><td><p>cudnn</p></td>
+<td><p>7.6.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>tensorflow</p></td>
+<td><p>2.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>tensorboard</p></td>
+<td><p>2.2.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>1.18.5</p></td>
+</tr>
+<tr class="row-even"><td><p>pandas</p></td>
+<td><p>1.0.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>pillow</p></td>
+<td><p>7.1.2</p></td>
+</tr>
+<tr class="row-even"><td><p>scipy</p></td>
+<td><p>1.4.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>matplotlib</p></td>
+<td><p>3.2.1</p></td>
+</tr>
+<tr class="row-even"><td><p>seaborn</p></td>
+<td><p>0.10.1</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="r">预置 R 环境<a class="headerlink" href="#r" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>环境</p></th>
+<th class="head"><p>版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>3.6.1</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="id2">在 Jupyter 中使用自定义的环境<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>新建环境（或使用已有环境）:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>miniconda3
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>test-env
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>test-env
+</code></pre></div>
+</div>
+<p>安装并注册为<code class="docutils literal notranslate"><span class="pre">jupter</span> <span class="pre">kernel</span></code>：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code><span class="o">(</span>test-env<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>ipykernel
+<span class="o">(</span>test-env<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>test-env<span class="w"> </span>--display-name<span class="w"> </span><span class="s2">&quot;Test Environment&quot;</span>
+</code></pre></div>
+</div>
+<p>然后可以在<code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>中选择名为<code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Environment</span></code>的Kernel进行计算。</p>
+<p>如果环境需要依赖<code class="docutils literal notranslate"><span class="pre">NVIDIA</span> <span class="pre">CUDA</span> <span class="pre">Toolkit</span></code>或<code class="docutils literal notranslate"><span class="pre">NVIDIA</span> <span class="pre">cuDNN</span></code>，可以使用<code class="docutils literal notranslate"><span class="pre">conda</span></code>进行安装：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code><span class="o">(</span>test-env<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">10</span>.1<span class="w"> </span>cudnn
+</code></pre></div>
+</div>
+<h2 id="jupyter-r">在 Jupyter 中使用自定义 R 环境<a class="headerlink" href="#jupyter-r" title="Permalink to this heading">¶</a></h2>
+<p>新建环境（或使用已有环境）:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>miniconda3
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>r-test-env
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>r-test-env
+$<span class="w"> </span><span class="o">(</span>r-test-env<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>r<span class="w"> </span>r-essentials
+</code></pre></div>
+</div>
+<p>安装并注册为<code class="docutils literal notranslate"><span class="pre">jupter</span> <span class="pre">kernel</span></code>：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code><span class="o">(</span>test-env<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>R
+&gt;<span class="w"> </span>install.packages<span class="o">(</span><span class="s1">&#39;IRkernel&#39;</span><span class="o">)</span>
+&gt;<span class="w"> </span>IRkernel::installspec<span class="o">(</span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;r-test-env&#39;</span>,<span class="w"> </span><span class="nv">displayname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;R 3.6.1&#39;</span><span class="o">)</span>
+</code></pre></div>
+</div>
+<p>然后可以在<code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>中选择名为<code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">3.6.1</span></code>的Kernel进行计算。</p>
+<h2 id="id3">参考资料<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/Jupyter">Jupyter Wikepedia</a></p></li>
+<li><p><a class="reference external" href="https://jupyter.org/">Jupyter Home</a></p></li>
+</ul>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="rdp.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 远程桌面" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              远程桌面
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="rstudio.html" class="md-footer__link md-footer__link--next" aria-label="Next: RStudio" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              RStudio
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>

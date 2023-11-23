@@ -1,0 +1,1293 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.png">
+    
+    
+      
+        <title>mdtest - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              mdtest
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/index.html" class="md-nav__link">
+        <span class="md-ellipsis">可视化平台</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transport/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文件系统与数据访问</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../index.html"><span class="md-ellipsis">软件</span></a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">软件</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module.html" class="md-nav__link">
+        <span class="md-ellipsis">软件模块使用方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compilers_and_languages/index.html" class="md-nav__link">
+        <span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">基准测试</span></a>
+          
+            <label for="__nav_10_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="基准测试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">基准测试</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hpl.html" class="md-nav__link">
+        <span class="md-ellipsis">HPL</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="osubenchmarks.html" class="md-nav__link">
+        <span class="md-ellipsis">OSU Benchmarks</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hpcg.html" class="md-nav__link">
+        <span class="md-ellipsis">HPCG</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="minife.html" class="md-nav__link">
+        <span class="md-ellipsis">minife</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ior.html" class="md-nav__link">
+        <span class="md-ellipsis">IOR</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">mdtest</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">mdtest</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="app/benchtools/mdtest:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/benchtools/mdtest:主要功能 (reference label)" class="md-ellipsis">主要功能</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/benchtools/mdtest:集群上部署的mdtest (reference label)" class="md-ellipsis">集群上部署的mdtest</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="app/benchtools/mdtest:mdtest 用法 (reference label)" class="md-ellipsis">mdtest 用法</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mdtest 用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span title="app/benchtools/mdtest:选项含义 (reference label)" class="md-ellipsis">选项含义</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="app/benchtools/mdtest:分层目录结构（树）的示例 (reference label)" class="md-ellipsis">分层目录结构（树）的示例</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id7" class="md-nav__link">
+    <span title="app/benchtools/mdtest:简单示例 (reference label)" class="md-ellipsis">简单示例</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/benchtools/mdtest:大规模mdtest测试 (reference label)" class="md-ellipsis">大规模mdtest测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="大规模mdtest测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span title="app/benchtools/mdtest:在思源一号上运行 (reference label)" class="md-ellipsis">在思源一号上运行</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi2-0" class="md-nav__link">
+    <span title="app/benchtools/mdtest:在pi2.0上运行 (reference label)" class="md-ellipsis">在Pi2.<wbr>0上运行</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io500.html" class="md-nav__link">
+        <span class="md-ellipsis">io500</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/index.html" class="md-nav__link">
+        <span class="md-ellipsis">AI 计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineeringscience/index.html" class="md-nav__link">
+        <span class="md-ellipsis">原子分子工程计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bioinformatics/index.html" class="md-nav__link">
+        <span class="md-ellipsis">生物信息计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="app/benchtools/mdtest:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/benchtools/mdtest:主要功能 (reference label)" class="md-ellipsis">主要功能</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/benchtools/mdtest:集群上部署的mdtest (reference label)" class="md-ellipsis">集群上部署的mdtest</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="app/benchtools/mdtest:mdtest 用法 (reference label)" class="md-ellipsis">mdtest 用法</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mdtest 用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span title="app/benchtools/mdtest:选项含义 (reference label)" class="md-ellipsis">选项含义</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="app/benchtools/mdtest:分层目录结构（树）的示例 (reference label)" class="md-ellipsis">分层目录结构（树）的示例</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id7" class="md-nav__link">
+    <span title="app/benchtools/mdtest:简单示例 (reference label)" class="md-ellipsis">简单示例</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="app/benchtools/mdtest:大规模mdtest测试 (reference label)" class="md-ellipsis">大规模mdtest测试</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="大规模mdtest测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span title="app/benchtools/mdtest:在思源一号上运行 (reference label)" class="md-ellipsis">在思源一号上运行</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi2-0" class="md-nav__link">
+    <span title="app/benchtools/mdtest:在pi2.0上运行 (reference label)" class="md-ellipsis">在Pi2.<wbr>0上运行</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="mdtest">mdtest<a class="headerlink" href="#mdtest" title="Permalink to this heading">¶</a></h1>
+<h2 id="id1">简介<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<p>mdtest是一个用于测试文件系统性能的基准测试工具，特别用于测量文件系统的元数据性能，如创建、查找、读取和删除文件和目录。这个工具通常用于评估并行文件系统、分布式文件系统和对象存储系统的性能，以及它们在高性能计算（HPC）和大规模数据存储环境中的表现。</p>
+<h2 id="id2">主要功能<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>mdtest 的主要功能包括：</p>
+<ol class="arabic simple">
+<li><p>创建和删除文件/目录：mdtest可以模拟并记录文件和目录的创建和删除操作，以便评估文件系统在处理这些操作时的性能。</p></li>
+<li><p>统计文件/目录：工具可以执行文件和目录的统计操作，以评估文件系统执行元数据查询的性能。</p></li>
+<li><p>读取文件：mdtest可以模拟从文件中读取数据的操作，以便评估文件系统的读取性能。</p></li>
+<li><p>随机操作：mdtest可以配置为执行随机操作，以评估文件系统的随机访问性能。</p></li>
+<li><p>可定制性：工具提供了多个命令行选项，可以用于配置测试的参数，如目录结构的深度、分支因子、迭代次数、并发性等。</p></li>
+<li><p>并行性：mdtest可以在多个并行任务之间执行测试，以模拟多用户或多任务环境下的文件系统性能。</p></li>
+<li><p>输出和报告：mdtest生成性能数据的输出，允许用户分析文件系统性能，并生成报告以帮助优化和调整文件系统配置。</p></li>
+</ol>
+<p>mdtest是一个有用的工具，可帮助管理员和研究人员评估和比较不同文件系统的性能，特别是在高性能计算环境中，其中文件系统的性能至关重要。</p>
+<h2 id="id3">集群上部署的mdtest<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>目前mdtest工具已经被收纳到ior测试工具中，调用ior工具即可进行mdtest测试。</p>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>版本</strong></p></th>
+<th class="head"><p><strong>平台</strong></p></th>
+<th class="head"><p><strong>构建方式</strong></p></th>
+<th class="head"><p><strong>模块名</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3.3.0</p></td>
+<td><p>思源一号</p></td>
+<td><p>spack</p></td>
+<td><p>ior/3.3.0-gcc-11.2.0-openmpi</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.3.0</p></td>
+<td><p>Pi2.0</p></td>
+<td><p>spack</p></td>
+<td><p>ior/3.3.0-gcc-9.2.0-openmpi-4.0.5</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="id4">mdtest 用法<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h3 id="id5">选项含义<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<p>mdtest 选项含义</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>-a：用于S3目标的用户ID
+-A：S3目标的主机名或IP地址
+-b：分层目录结构的分支因子
+-B：在阶段之间没有障碍（创建/统计/删除）
+-c：集体创建：任务0执行所有创建和删除操作
+-C：仅创建文件/目录
+-d：测试运行的目录
+-D：仅对目录执行测试（不包括文件）
+-e：从每个文件中读取的字节数
+-E：仅读取文件
+-f：测试将在其上运行的任务的第一个编号
+-F：仅对文件执行测试（不包括目录）
+-g：添加到唯一性桶名称的整数标识符
+-h：打印帮助信息
+-i：测试运行的迭代次数
+-I：每个树节点的项目数
+-l：测试将在其上运行的任务的最后一个编号
+-L：仅在叶子级别创建文件/目录
+-M：每个任务的唯一工作目录，并跨LUSTRE MDTS执行分布
+-n：每个任务将创建/统计/删除＃个文件/目录
+-N：文件/目录统计之间相邻任务的步幅＃（本地=0）
+-p：迭代前延迟（以秒为单位）
+-r：仅删除文件/目录
+-R：随机统计文件/目录（可提供可选种子）
+-s：每个测试的任务数量之间的步幅（需要4个节点以避免缓存效应）
+-S：共享文件访问（仅限文件，不包括目录）
+-t：唯一工作目录开销时间
+-T：仅统计文件/目录
+-u：每个任务的唯一工作目录
+-v：详细度（每个选项的每个实例递增1）
+-V：详细度值
+-w：要写入每个文件的字节数
+-y：在写入完成后同步文件
+-z：分层目录结构的深度
+</code></pre></div>
+</div>
+<h3 id="id6">分层目录结构（树）的示例<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>分层目录结构（树）
+
+               =======
+              |       |  （树节点）
+               =======
+              /   |   \
+        ------    |    ------
+       /          |          \
+   =======     =======     =======
+  |       |   |       |   |       |  （叶级）
+   =======     =======     =======
+</code></pre></div>
+</div>
+<p>在这个示例中，树的深度为1（z=1），分支因子为3（b=3）。树的顶部节点是根节点。离根节点最远的节点级别是叶子级别。所有由mdtest创建的树都是平衡的。</p>
+<h3 id="id7">简单示例<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<p>下面已思源一号集群为例，执行如下简单的运行示例，进一步了解mdtest的运行方式，</p>
+<ol class="arabic simple">
+<li><p>这个命令将创建一个类似上述示例的树，然后每个任务将在每个树节点创建10个文件/目录。将创建三个这样的树（每个迭代一个）。</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=&quot;mdtest&quot;</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH -p 64c512g</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span> <span class="n">openmpi</span> <span class="n">ior</span>
+<span class="n">export</span> <span class="n">UCX_NET_DEVICES</span><span class="o">=</span><span class="n">mlx5_0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">export</span> <span class="n">OMPI_MCA_btl</span><span class="o">=^</span><span class="n">openib</span>
+
+<span class="n">mdtest</span> <span class="o">-</span><span class="n">z</span> <span class="mi">1</span> <span class="o">-</span><span class="n">b</span> <span class="mi">3</span> <span class="o">-</span><span class="n">I</span> <span class="mi">10</span> <span class="o">-</span><span class="n">C</span> <span class="o">-</span><span class="n">i</span> <span class="mi">3</span>
+</code></pre></div>
+</div>
+<p>测试结果</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">--</span> <span class="n">started</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">14</span> <span class="o">--</span>
+
+<span class="n">mdtest</span><span class="o">-</span><span class="mf">3.3.0</span> <span class="n">was</span> <span class="n">launched</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">total</span> <span class="n">task</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">on</span> <span class="mi">1</span> <span class="n">node</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Command</span> <span class="n">line</span> <span class="n">used</span><span class="p">:</span> <span class="n">mdtest</span> <span class="s1">&#39;-z&#39;</span> <span class="s1">&#39;1&#39;</span> <span class="s1">&#39;-b&#39;</span> <span class="s1">&#39;3&#39;</span> <span class="s1">&#39;-I&#39;</span> <span class="s1">&#39;10&#39;</span> <span class="s1">&#39;-C&#39;</span> <span class="s1">&#39;-i&#39;</span> <span class="s1">&#39;3&#39;</span>
+<span class="n">Path</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">acct</span><span class="o">-</span><span class="n">hpc</span><span class="o">/</span><span class="n">hpcxdy</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">mdtest</span>
+<span class="n">FS</span><span class="p">:</span> <span class="mf">7487.9</span> <span class="n">TiB</span>   <span class="n">Used</span> <span class="n">FS</span><span class="p">:</span> <span class="mf">77.4</span><span class="o">%</span>   <span class="n">Inodes</span><span class="p">:</span> <span class="mf">3814.7</span> <span class="n">Mi</span>   <span class="n">Used</span> <span class="n">Inodes</span><span class="p">:</span> <span class="mf">67.0</span><span class="o">%</span>
+
+<span class="n">Nodemap</span><span class="p">:</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="n">tasks</span><span class="p">,</span> <span class="mi">40</span> <span class="n">files</span><span class="o">/</span><span class="n">directories</span>
+
+<span class="n">SUMMARY</span> <span class="n">rate</span><span class="p">:</span> <span class="p">(</span><span class="n">of</span> <span class="mi">3</span> <span class="n">iterations</span><span class="p">)</span>
+   <span class="n">Operation</span>                      <span class="n">Max</span>            <span class="n">Min</span>           <span class="n">Mean</span>        <span class="n">Std</span> <span class="n">Dev</span>
+   <span class="o">---------</span>                      <span class="o">---</span>            <span class="o">---</span>           <span class="o">----</span>        <span class="o">-------</span>
+   <span class="n">Directory</span> <span class="n">creation</span>        <span class="p">:</span>       <span class="mf">7737.830</span>       <span class="mf">1898.994</span>       <span class="mf">5539.577</span>       <span class="mf">2592.713</span>
+   <span class="n">Directory</span> <span class="n">stat</span>            <span class="p">:</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>
+   <span class="n">Directory</span> <span class="n">removal</span>         <span class="p">:</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">creation</span>             <span class="p">:</span>       <span class="mf">4826.385</span>       <span class="mf">4314.873</span>       <span class="mf">4610.705</span>        <span class="mf">216.379</span>
+   <span class="n">File</span> <span class="n">stat</span>                 <span class="p">:</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">read</span>                 <span class="p">:</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">removal</span>              <span class="p">:</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>
+   <span class="n">Tree</span> <span class="n">creation</span>             <span class="p">:</span>       <span class="mf">7340.325</span>        <span class="mf">234.797</span>       <span class="mf">4841.319</span>       <span class="mf">3261.222</span>
+   <span class="n">Tree</span> <span class="n">removal</span>              <span class="p">:</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>          <span class="mf">0.000</span>
+<span class="o">--</span> <span class="n">finished</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">14</span> <span class="o">--</span>
+</code></pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>在当前工作目录中创建一个深度为5、分支因子为2的目录树。每个任务在每个树节点上操作10个文件/目录。</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=&quot;mdtest&quot;</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH -p 64c512g</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span> <span class="n">openmpi</span> <span class="n">ior</span>
+<span class="n">export</span> <span class="n">UCX_NET_DEVICES</span><span class="o">=</span><span class="n">mlx5_0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">export</span> <span class="n">OMPI_MCA_btl</span><span class="o">=^</span><span class="n">openib</span>
+
+<span class="n">mdtest</span> <span class="o">-</span><span class="n">I</span> <span class="mi">10</span> <span class="o">-</span><span class="n">z</span> <span class="mi">5</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span>
+</code></pre></div>
+</div>
+<p>测试结果</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">--</span> <span class="n">started</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">55</span> <span class="o">--</span>
+
+<span class="n">mdtest</span><span class="o">-</span><span class="mf">3.3.0</span> <span class="n">was</span> <span class="n">launched</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">total</span> <span class="n">task</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">on</span> <span class="mi">1</span> <span class="n">node</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Command</span> <span class="n">line</span> <span class="n">used</span><span class="p">:</span> <span class="n">mdtest</span> <span class="s1">&#39;-I&#39;</span> <span class="s1">&#39;10&#39;</span> <span class="s1">&#39;-z&#39;</span> <span class="s1">&#39;5&#39;</span> <span class="s1">&#39;-b&#39;</span> <span class="s1">&#39;2&#39;</span>
+<span class="n">Path</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">acct</span><span class="o">-</span><span class="n">hpc</span><span class="o">/</span><span class="n">hpcxdy</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">mdtest</span>
+<span class="n">FS</span><span class="p">:</span> <span class="mf">7487.9</span> <span class="n">TiB</span>   <span class="n">Used</span> <span class="n">FS</span><span class="p">:</span> <span class="mf">77.4</span><span class="o">%</span>   <span class="n">Inodes</span><span class="p">:</span> <span class="mf">3814.7</span> <span class="n">Mi</span>   <span class="n">Used</span> <span class="n">Inodes</span><span class="p">:</span> <span class="mf">67.0</span><span class="o">%</span>
+
+<span class="n">Nodemap</span><span class="p">:</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="n">tasks</span><span class="p">,</span> <span class="mi">630</span> <span class="n">files</span><span class="o">/</span><span class="n">directories</span>
+
+<span class="n">SUMMARY</span> <span class="n">rate</span><span class="p">:</span> <span class="p">(</span><span class="n">of</span> <span class="mi">1</span> <span class="n">iterations</span><span class="p">)</span>
+   <span class="n">Operation</span>                      <span class="n">Max</span>            <span class="n">Min</span>           <span class="n">Mean</span>        <span class="n">Std</span> <span class="n">Dev</span>
+   <span class="o">---------</span>                      <span class="o">---</span>            <span class="o">---</span>           <span class="o">----</span>        <span class="o">-------</span>
+   <span class="n">Directory</span> <span class="n">creation</span>        <span class="p">:</span>       <span class="mf">8063.150</span>       <span class="mf">8063.150</span>       <span class="mf">8063.150</span>          <span class="mf">0.000</span>
+   <span class="n">Directory</span> <span class="n">stat</span>            <span class="p">:</span>     <span class="mf">285877.774</span>     <span class="mf">285877.774</span>     <span class="mf">285877.774</span>          <span class="mf">0.000</span>
+   <span class="n">Directory</span> <span class="n">removal</span>         <span class="p">:</span>      <span class="mf">21821.806</span>      <span class="mf">21821.806</span>      <span class="mf">21821.806</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">creation</span>             <span class="p">:</span>       <span class="mf">8053.735</span>       <span class="mf">8053.735</span>       <span class="mf">8053.735</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">stat</span>                 <span class="p">:</span>     <span class="mf">285288.229</span>     <span class="mf">285288.229</span>     <span class="mf">285288.229</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">read</span>                 <span class="p">:</span>     <span class="mf">132316.999</span>     <span class="mf">132316.999</span>     <span class="mf">132316.999</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">removal</span>              <span class="p">:</span>       <span class="mf">8476.868</span>       <span class="mf">8476.868</span>       <span class="mf">8476.868</span>          <span class="mf">0.000</span>
+   <span class="n">Tree</span> <span class="n">creation</span>             <span class="p">:</span>      <span class="mf">22422.530</span>      <span class="mf">22422.530</span>      <span class="mf">22422.530</span>          <span class="mf">0.000</span>
+   <span class="n">Tree</span> <span class="n">removal</span>              <span class="p">:</span>      <span class="mf">21058.275</span>      <span class="mf">21058.275</span>      <span class="mf">21058.275</span>          <span class="mf">0.000</span>
+<span class="o">--</span> <span class="n">finished</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">55</span> <span class="o">--</span>
+</code></pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>每个任务在当前路径中的根节点上创建100个文件/目录（根节点没有分支）。这将执行三次，迭代中计算聚合值。</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=&quot;mdtest&quot;</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH -p 64c512g</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span> <span class="n">openmpi</span> <span class="n">ior</span>
+<span class="n">export</span> <span class="n">UCX_NET_DEVICES</span><span class="o">=</span><span class="n">mlx5_0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">export</span> <span class="n">OMPI_MCA_btl</span><span class="o">=^</span><span class="n">openib</span>
+
+<span class="n">mdtest</span> <span class="o">-</span><span class="n">n</span> <span class="mi">100</span> <span class="o">-</span><span class="n">i</span> <span class="mi">3</span>
+</code></pre></div>
+</div>
+<p>测试结果</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">--</span> <span class="n">started</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">22</span> <span class="o">--</span>
+
+<span class="n">mdtest</span><span class="o">-</span><span class="mf">3.3.0</span> <span class="n">was</span> <span class="n">launched</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">total</span> <span class="n">task</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">on</span> <span class="mi">1</span> <span class="n">node</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Command</span> <span class="n">line</span> <span class="n">used</span><span class="p">:</span> <span class="n">mdtest</span> <span class="s1">&#39;-n&#39;</span> <span class="s1">&#39;100&#39;</span> <span class="s1">&#39;-i&#39;</span> <span class="s1">&#39;3&#39;</span>
+<span class="n">Path</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">acct</span><span class="o">-</span><span class="n">hpc</span><span class="o">/</span><span class="n">hpcxdy</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">mdtest</span>
+<span class="n">FS</span><span class="p">:</span> <span class="mf">7487.9</span> <span class="n">TiB</span>   <span class="n">Used</span> <span class="n">FS</span><span class="p">:</span> <span class="mf">77.4</span><span class="o">%</span>   <span class="n">Inodes</span><span class="p">:</span> <span class="mf">3814.7</span> <span class="n">Mi</span>   <span class="n">Used</span> <span class="n">Inodes</span><span class="p">:</span> <span class="mf">67.0</span><span class="o">%</span>
+
+<span class="n">Nodemap</span><span class="p">:</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="n">tasks</span><span class="p">,</span> <span class="mi">100</span> <span class="n">files</span><span class="o">/</span><span class="n">directories</span>
+
+<span class="n">SUMMARY</span> <span class="n">rate</span><span class="p">:</span> <span class="p">(</span><span class="n">of</span> <span class="mi">3</span> <span class="n">iterations</span><span class="p">)</span>
+   <span class="n">Operation</span>                      <span class="n">Max</span>            <span class="n">Min</span>           <span class="n">Mean</span>        <span class="n">Std</span> <span class="n">Dev</span>
+   <span class="o">---------</span>                      <span class="o">---</span>            <span class="o">---</span>           <span class="o">----</span>        <span class="o">-------</span>
+   <span class="n">Directory</span> <span class="n">creation</span>        <span class="p">:</span>      <span class="mf">29598.602</span>      <span class="mf">24151.649</span>      <span class="mf">26791.562</span>       <span class="mf">2226.847</span>
+   <span class="n">Directory</span> <span class="n">stat</span>            <span class="p">:</span>     <span class="mf">528368.082</span>     <span class="mf">520410.500</span>     <span class="mf">524339.827</span>       <span class="mf">3249.423</span>
+   <span class="n">Directory</span> <span class="n">removal</span>         <span class="p">:</span>      <span class="mf">23142.737</span>      <span class="mf">22403.642</span>      <span class="mf">22895.651</span>        <span class="mf">347.904</span>
+   <span class="n">File</span> <span class="n">creation</span>             <span class="p">:</span>      <span class="mf">27976.199</span>      <span class="mf">19203.375</span>      <span class="mf">24963.815</span>       <span class="mf">4074.675</span>
+   <span class="n">File</span> <span class="n">stat</span>                 <span class="p">:</span>     <span class="mf">531245.186</span>     <span class="mf">524915.095</span>     <span class="mf">528648.255</span>       <span class="mf">2706.261</span>
+   <span class="n">File</span> <span class="n">read</span>                 <span class="p">:</span>     <span class="mf">178095.024</span>     <span class="mf">175329.708</span>     <span class="mf">176263.574</span>       <span class="mf">1295.116</span>
+   <span class="n">File</span> <span class="n">removal</span>              <span class="p">:</span>      <span class="mf">23606.118</span>      <span class="mf">15639.633</span>      <span class="mf">20943.016</span>       <span class="mf">3750.070</span>
+   <span class="n">Tree</span> <span class="n">creation</span>             <span class="p">:</span>      <span class="mf">27059.938</span>       <span class="mf">4670.584</span>      <span class="mf">12952.803</span>      <span class="mf">10025.568</span>
+   <span class="n">Tree</span> <span class="n">removal</span>              <span class="p">:</span>      <span class="mf">14532.983</span>      <span class="mf">13990.906</span>      <span class="mf">14203.328</span>        <span class="mf">236.318</span>
+<span class="o">--</span> <span class="n">finished</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">22</span> <span class="o">--</span>
+</code></pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>每个任务在当前目录中创建一个目录树。每棵树的深度为3，分支因子为5。在每棵树的每个节点上都操作了五个文件/目录。</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=&quot;mdtest&quot;</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH -p 64c512g</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span> <span class="n">openmpi</span> <span class="n">ior</span>
+<span class="n">export</span> <span class="n">UCX_NET_DEVICES</span><span class="o">=</span><span class="n">mlx5_0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">export</span> <span class="n">OMPI_MCA_btl</span><span class="o">=^</span><span class="n">openib</span>
+
+<span class="n">mdtest</span> <span class="o">-</span><span class="n">I</span> <span class="mi">5</span> <span class="o">-</span><span class="n">z</span> <span class="mi">3</span> <span class="o">-</span><span class="n">b</span> <span class="mi">5</span> <span class="o">-</span><span class="n">u</span>
+</code></pre></div>
+</div>
+<p>测试结果</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">--</span> <span class="n">started</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">59</span> <span class="o">--</span>
+
+<span class="n">mdtest</span><span class="o">-</span><span class="mf">3.3.0</span> <span class="n">was</span> <span class="n">launched</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">total</span> <span class="n">task</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">on</span> <span class="mi">1</span> <span class="n">node</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Command</span> <span class="n">line</span> <span class="n">used</span><span class="p">:</span> <span class="n">mdtest</span> <span class="s1">&#39;-I&#39;</span> <span class="s1">&#39;5&#39;</span> <span class="s1">&#39;-z&#39;</span> <span class="s1">&#39;3&#39;</span> <span class="s1">&#39;-b&#39;</span> <span class="s1">&#39;5&#39;</span> <span class="s1">&#39;-u&#39;</span>
+<span class="n">Path</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">acct</span><span class="o">-</span><span class="n">hpc</span><span class="o">/</span><span class="n">hpcxdy</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">mdtest</span>
+<span class="n">FS</span><span class="p">:</span> <span class="mf">7487.9</span> <span class="n">TiB</span>   <span class="n">Used</span> <span class="n">FS</span><span class="p">:</span> <span class="mf">77.4</span><span class="o">%</span>   <span class="n">Inodes</span><span class="p">:</span> <span class="mf">3814.7</span> <span class="n">Mi</span>   <span class="n">Used</span> <span class="n">Inodes</span><span class="p">:</span> <span class="mf">67.0</span><span class="o">%</span>
+
+<span class="n">Nodemap</span><span class="p">:</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="n">tasks</span><span class="p">,</span> <span class="mi">780</span> <span class="n">files</span><span class="o">/</span><span class="n">directories</span>
+
+<span class="n">SUMMARY</span> <span class="n">rate</span><span class="p">:</span> <span class="p">(</span><span class="n">of</span> <span class="mi">1</span> <span class="n">iterations</span><span class="p">)</span>
+   <span class="n">Operation</span>                      <span class="n">Max</span>            <span class="n">Min</span>           <span class="n">Mean</span>        <span class="n">Std</span> <span class="n">Dev</span>
+   <span class="o">---------</span>                      <span class="o">---</span>            <span class="o">---</span>           <span class="o">----</span>        <span class="o">-------</span>
+   <span class="n">Directory</span> <span class="n">creation</span>        <span class="p">:</span>      <span class="mf">13937.588</span>      <span class="mf">13937.588</span>      <span class="mf">13937.588</span>          <span class="mf">0.000</span>
+   <span class="n">Directory</span> <span class="n">stat</span>            <span class="p">:</span>     <span class="mf">322948.871</span>     <span class="mf">322948.871</span>     <span class="mf">322948.871</span>          <span class="mf">0.000</span>
+   <span class="n">Directory</span> <span class="n">removal</span>         <span class="p">:</span>      <span class="mf">23411.636</span>      <span class="mf">23411.636</span>      <span class="mf">23411.636</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">creation</span>             <span class="p">:</span>      <span class="mf">16614.880</span>      <span class="mf">16614.880</span>      <span class="mf">16614.880</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">stat</span>                 <span class="p">:</span>     <span class="mf">327131.260</span>     <span class="mf">327131.260</span>     <span class="mf">327131.260</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">read</span>                 <span class="p">:</span>     <span class="mf">141012.437</span>     <span class="mf">141012.437</span>     <span class="mf">141012.437</span>          <span class="mf">0.000</span>
+   <span class="n">File</span> <span class="n">removal</span>              <span class="p">:</span>      <span class="mf">17020.530</span>      <span class="mf">17020.530</span>      <span class="mf">17020.530</span>          <span class="mf">0.000</span>
+   <span class="n">Tree</span> <span class="n">creation</span>             <span class="p">:</span>      <span class="mf">20008.421</span>      <span class="mf">20008.421</span>      <span class="mf">20008.421</span>          <span class="mf">0.000</span>
+   <span class="n">Tree</span> <span class="n">removal</span>              <span class="p">:</span>      <span class="mf">23610.532</span>      <span class="mf">23610.532</span>      <span class="mf">23610.532</span>          <span class="mf">0.000</span>
+<span class="o">--</span> <span class="n">finished</span> <span class="n">at</span> <span class="mi">11</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">2023</span> <span class="mi">14</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">59</span> <span class="o">--</span>
+</code></pre></div>
+</div>
+<h2 id="id8">大规模mdtest测试<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<p>如果要对集群进行大规模小文件读写测试，可参考下面脚本，一共使用64个节点测试，每个节点启动4个MPI进程做文件操作，总共会产生约1600万文件，测试迭代100次。</p>
+<h3 id="id9">在思源一号上运行<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=&quot;mdtest&quot;</span>
+<span class="c1">#SBATCH -N 64</span>
+<span class="c1">#SBATCH --ntasks-per-node=4</span>
+<span class="c1">#SBATCH -p 64c512g</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span> <span class="n">openmpi</span> <span class="n">ior</span>
+<span class="n">export</span> <span class="n">UCX_NET_DEVICES</span><span class="o">=</span><span class="n">mlx5_0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">export</span> <span class="n">OMPI_MCA_btl</span><span class="o">=^</span><span class="n">openib</span>
+
+<span class="n">mpirun</span> <span class="n">mdtest</span> <span class="o">-</span><span class="n">F</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">z</span> <span class="mi">4</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span> <span class="o">-</span><span class="n">I</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">i</span> <span class="mi">100</span> <span class="o">-</span><span class="n">u</span>
+</code></pre></div>
+</div>
+<h3 id="pi2-0">在Pi2.0上运行<a class="headerlink" href="#pi2-0" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=&quot;mdtest&quot;</span>
+<span class="c1">#SBATCH -N 64</span>
+<span class="c1">#SBATCH --ntasks-per-node=4</span>
+<span class="c1">#SBATCH -p cpu</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span> <span class="n">openmpi</span> <span class="n">ior</span>
+
+<span class="n">mpirun</span> <span class="n">mdtest</span> <span class="o">-</span><span class="n">F</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">z</span> <span class="mi">4</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span> <span class="o">-</span><span class="n">I</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">i</span> <span class="mi">100</span> <span class="o">-</span><span class="n">u</span>
+</code></pre></div>
+</div>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="ior.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: IOR" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              IOR
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="io500.html" class="md-footer__link md-footer__link--next" aria-label="Next: io500" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              io500
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>

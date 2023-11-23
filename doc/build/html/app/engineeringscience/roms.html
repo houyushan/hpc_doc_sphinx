@@ -1,0 +1,1830 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.png">
+    
+    
+      
+        <title>ROMS - 上海交大超算平台用户手册 Documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.3e5db3443ca180270.min.css?v=3ca437ca" />
+        <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-190329530-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#id2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-header__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            上海交大超算平台用户手册 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ROMS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="上海交大超算平台用户手册 Documentation" class="md-nav__button md-logo" aria-label="上海交大超算平台用户手册 Documentation" data-md-component="logo">
+      <img src="../../_static/logos.png" alt="logo">
+    </a>
+    上海交大超算平台用户手册 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SJTU HPC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Getting Started</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/index.html" class="md-nav__link">
+        <span class="md-ellipsis">快速上手</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system/index.html" class="md-nav__link">
+        <span class="md-ellipsis">平台硬件资源</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accounts/index.html" class="md-nav__link">
+        <span class="md-ellipsis">账号及充值</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/index.html" class="md-nav__link">
+        <span class="md-ellipsis">可视化平台</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login/index.html" class="md-nav__link">
+        <span class="md-ellipsis">登录交我算集群</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transport/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文件系统与数据访问</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job/index.html" class="md-nav__link">
+        <span class="md-ellipsis">提交作业</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/index.html" class="md-nav__link">
+        <span class="md-ellipsis">容器</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../index.html"><span class="md-ellipsis">软件</span></a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">软件</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module.html" class="md-nav__link">
+        <span class="md-ellipsis">软件模块使用方法</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compilers_and_languages/index.html" class="md-nav__link">
+        <span class="md-ellipsis">编译器、MPI库、数学库、应用工具</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchtools/index.html" class="md-nav__link">
+        <span class="md-ellipsis">基准测试</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/index.html" class="md-nav__link">
+        <span class="md-ellipsis">AI 计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html"><span class="md-ellipsis">原子分子工程计算</span></a>
+          
+            <label for="__nav_10_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="原子分子工程计算" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">原子分子工程计算</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="abinit.html" class="md-nav__link">
+        <span class="md-ellipsis">ABINIT</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="amber.html" class="md-nav__link">
+        <span class="md-ellipsis">Amber</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basilisk.html" class="md-nav__link">
+        <span class="md-ellipsis">Basilisk</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calculix.html" class="md-nav__link">
+        <span class="md-ellipsis">Calculix</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cantera.html" class="md-nav__link">
+        <span class="md-ellipsis">Cantera</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="casm.html" class="md-nav__link">
+        <span class="md-ellipsis">CASM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cesm.html" class="md-nav__link">
+        <span class="md-ellipsis">CESM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cp2k.html" class="md-nav__link">
+        <span class="md-ellipsis">CP2k</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cplex.html" class="md-nav__link">
+        <span class="md-ellipsis">cplex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gerris.html" class="md-nav__link">
+        <span class="md-ellipsis">Gerris</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gnuplot.html" class="md-nav__link">
+        <span class="md-ellipsis">gnuplot</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gaussian.html" class="md-nav__link">
+        <span class="md-ellipsis">GAUSSIAN</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gromacs.html" class="md-nav__link">
+        <span class="md-ellipsis">GROMACS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lammps.html" class="md-nav__link">
+        <span class="md-ellipsis">LAMMPS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lammps-rbe.html" class="md-nav__link">
+        <span class="md-ellipsis">LAMMPS-<wbr>RBE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nektar.html" class="md-nav__link">
+        <span class="md-ellipsis">Nektar++</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="neper-fepx.html" class="md-nav__link">
+        <span class="md-ellipsis">Neper-<wbr>FEPX</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nwchem.html" class="md-nav__link">
+        <span class="md-ellipsis">NWChem</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="octave.html" class="md-nav__link">
+        <span class="md-ellipsis">Octave</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openRadioss.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>Radioss</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="whiskythc.html" class="md-nav__link">
+        <span class="md-ellipsis">Whisky<wbr>THC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openfoam.html" class="md-nav__link">
+        <span class="md-ellipsis">Open<wbr>FOAM</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="osiris.html" class="md-nav__link">
+        <span class="md-ellipsis">Osiris</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ovito.html" class="md-nav__link">
+        <span class="md-ellipsis">OVITO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="psi4.html" class="md-nav__link">
+        <span class="md-ellipsis">PSI4</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pysph.html" class="md-nav__link">
+        <span class="md-ellipsis">Py<wbr>SPH</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/paraview.html" class="md-nav__link">
+        <span class="md-ellipsis">Paraview</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quantum-espresso.html" class="md-nav__link">
+        <span class="md-ellipsis">Quantum ESPRESSO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quickpic.html" class="md-nav__link">
+        <span class="md-ellipsis">Quick<wbr>PIC</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="siesta.html" class="md-nav__link">
+        <span class="md-ellipsis">SIESTA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="star-ccm.html" class="md-nav__link">
+        <span class="md-ellipsis">STAR-<wbr>CCM+</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sumo.html" class="md-nav__link">
+        <span class="md-ellipsis">SUMO</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vasp.html" class="md-nav__link">
+        <span class="md-ellipsis">VASP</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vmd.html" class="md-nav__link">
+        <span class="md-ellipsis">VMD</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wrf.html" class="md-nav__link">
+        <span class="md-ellipsis">WRF</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="elphbolt.html" class="md-nav__link">
+        <span class="md-ellipsis">Elphbolt</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gmx_mmpbsa.html" class="md-nav__link">
+        <span class="md-ellipsis">gmx_<wbr>MMPBSA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cmaq.html" class="md-nav__link">
+        <span class="md-ellipsis">CMAQ</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="thirdorder.html" class="md-nav__link">
+        <span class="md-ellipsis">thirdorder</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gift-bte.html" class="md-nav__link">
+        <span class="md-ellipsis">Gift-<wbr>BTE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="damask.html" class="md-nav__link">
+        <span class="md-ellipsis">DAMSK</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">ROMS</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">ROMS</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/engineeringscience/roms:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roms3-6" class="md-nav__link">
+    <span title="app/engineeringscience/roms:roms3.6依赖的软件及其版本 (reference label)" class="md-ellipsis">ROMS3.<wbr>6依赖的软件及其版本</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moduleroms" class="md-nav__link">
+    <span title="app/engineeringscience/roms:使用module调用roms依赖环境 (reference label)" class="md-ellipsis">使用module调用ROMS依赖环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/engineeringscience/roms:集群上如何使用roms (reference label)" class="md-ellipsis">集群上如何使用ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="思源一号 自定义编译roms (reference label)" class="md-ellipsis">思源一号 自定义编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="π2.0 自定义编译roms (reference label)" class="md-ellipsis">π2.<wbr>0 自定义编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="思源一号 预编译roms (reference label)" class="md-ellipsis">思源一号 预编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="π2.0 预编译roms (reference label)" class="md-ellipsis">π2.<wbr>0 预编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id12" class="md-nav__link">
+    <span title="app/engineeringscience/roms:运行结果 (reference label)" class="md-ellipsis">运行结果</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id13" class="md-nav__link">
+    <span title="app/engineeringscience/roms:思源一号上的roms (reference label)" class="md-ellipsis">思源一号上的ROMS</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id14" class="md-nav__link">
+    <span title="app/engineeringscience/roms:π2.0上的roms (reference label)" class="md-ellipsis">π2.<wbr>0上的ROMS</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id15" class="md-nav__link">
+    <span title="app/engineeringscience/roms:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="proj.html" class="md-nav__link">
+        <span class="md-ellipsis">PROJ</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gamess.html" class="md-nav__link">
+        <span class="md-ellipsis">GAMESS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deepmd-kit.html" class="md-nav__link">
+        <span class="md-ellipsis">Dee<wbr>PMD-<wbr>kit</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chroma.html" class="md-nav__link">
+        <span class="md-ellipsis">CHROMA</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flash.html" class="md-nav__link">
+        <span class="md-ellipsis">FLASH</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="colmap.html" class="md-nav__link">
+        <span class="md-ellipsis">colmap</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pymultinest.html" class="md-nav__link">
+        <span class="md-ellipsis">pymultinest</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lorene.html" class="md-nav__link">
+        <span class="md-ellipsis">LORENE</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="boltztrap.html" class="md-nav__link">
+        <span class="md-ellipsis">Boltz<wbr>Tra<wbr>P</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bioinformatics/index.html" class="md-nav__link">
+        <span class="md-ellipsis">生物信息计算</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/index.html" class="md-nav__link">
+        <span class="md-ellipsis">常见问题</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/index.html" class="md-nav__link">
+        <span class="md-ellipsis">文档下载</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span title="app/engineeringscience/roms:简介 (reference label)" class="md-ellipsis">简介</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roms3-6" class="md-nav__link">
+    <span title="app/engineeringscience/roms:roms3.6依赖的软件及其版本 (reference label)" class="md-ellipsis">ROMS3.<wbr>6依赖的软件及其版本</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moduleroms" class="md-nav__link">
+    <span title="app/engineeringscience/roms:使用module调用roms依赖环境 (reference label)" class="md-ellipsis">使用module调用ROMS依赖环境</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span title="app/engineeringscience/roms:集群上如何使用roms (reference label)" class="md-ellipsis">集群上如何使用ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span title="思源一号 自定义编译roms (reference label)" class="md-ellipsis">思源一号 自定义编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span title="π2.0 自定义编译roms (reference label)" class="md-ellipsis">π2.<wbr>0 自定义编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id8" class="md-nav__link">
+    <span title="思源一号 预编译roms (reference label)" class="md-ellipsis">思源一号 预编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id10" class="md-nav__link">
+    <span title="π2.0 预编译roms (reference label)" class="md-ellipsis">π2.<wbr>0 预编译ROMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id12" class="md-nav__link">
+    <span title="app/engineeringscience/roms:运行结果 (reference label)" class="md-ellipsis">运行结果</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id13" class="md-nav__link">
+    <span title="app/engineeringscience/roms:思源一号上的roms (reference label)" class="md-ellipsis">思源一号上的ROMS</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id14" class="md-nav__link">
+    <span title="app/engineeringscience/roms:π2.0上的roms (reference label)" class="md-ellipsis">π2.<wbr>0上的ROMS</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id15" class="md-nav__link">
+    <span title="app/engineeringscience/roms:参考资料 (reference label)" class="md-ellipsis">参考资料</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="roms"><span id="id1"></span>ROMS<a class="headerlink" href="#roms" title="Permalink to this heading">¶</a></h1>
+<h2 id="id2">简介<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>ROMS全称Regional Ocean Modeling System，是一个三维区域海洋模型，由罗格斯大学海洋与海岸科学研究所和加利福尼亚大学洛杉矶分校共同研究开发，被广泛应用于海洋及河口地区的水动力及水环境模拟。</p>
+<h2 id="roms3-6">ROMS3.6依赖的软件及其版本<a class="headerlink" href="#roms3-6" title="Permalink to this heading">¶</a></h2>
+<p>思源一号和π2.0上安装的ROMS、依赖软件及其版本保持一致</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>zlib<span class="w">           </span>:<span class="w"> </span><span class="m">1</span>.2.11
+szip<span class="w">           </span>:<span class="w"> </span><span class="m">2</span>.1.1
+hdf5<span class="w">           </span>:<span class="w"> </span><span class="m">1</span>.12.0
+netcdf-c<span class="w">       </span>:<span class="w"> </span><span class="m">4</span>.8.0
+netcdf-fortran<span class="w"> </span>:<span class="w"> </span><span class="m">4</span>.5.3
+pnetcdf<span class="w">        </span>:<span class="w"> </span><span class="m">1</span>.12.0
+parallelIO<span class="w">     </span>:<span class="w"> </span><span class="m">2</span>.5.6
+</code></pre></div>
+</div>
+<h2 id="moduleroms">使用module调用ROMS依赖环境<a class="headerlink" href="#moduleroms" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>思源一号<span class="w"> </span>:<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>roms/3.6-intel-2021.4.0
+π2.0<span class="w">    </span>:<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>roms/3.6-intel-2021.4.0
+</code></pre></div>
+</div>
+<p>依赖软件具体的安装路径</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>思源一号
+zlib<span class="w">          </span>:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/netcdf
+szip<span class="w">          </span>:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/netcdf
+hdf5<span class="w">          </span>:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/netcdf
+netcdf-c<span class="w">      </span>:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/netcdf
+netcdf-fortran:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/netcdf
+parallelNetcdf:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/pnetcdf
+parallelIO<span class="w">    </span>:<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMSRely/pio
+
+π2.0
+zlib<span class="w">          </span>:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/netcdf
+szip<span class="w">          </span>:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/netcdf
+hdf5<span class="w">          </span>:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/netcdf
+netcdf-c<span class="w">      </span>:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/netcdf
+netcdf-fortran:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/netcdf
+parallelNetcdf:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/pnetcdf
+parallelIO<span class="w">    </span>:<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMSRely/pio
+</code></pre></div>
+</div>
+<h2 id="id3">集群上如何使用ROMS<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id4">思源一号 自定义编译ROMS</a></p></li>
+<li><p><a class="reference internal" href="#id6">π2.0 自定义编译ROMS</a></p></li>
+<li><p><a class="reference internal" href="#id8">思源一号 预编译ROMS</a></p></li>
+<li><p><a class="reference internal" href="#id10">π2.0 预编译ROMS</a></p></li>
+</ul>
+<h2 id="id4"><span id="id5"></span>思源一号 自定义编译ROMS<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>为方便广大师生编译ROMS，我们已将 <code class="docutils literal notranslate"><span class="pre">`build_roms.sh`</span></code> 和 <code class="docutils literal notranslate"><span class="pre">`Linux-ifort.mk`</span></code> 两个文件中依赖软件的参数提前修改
+上述两个文件的位置为</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMS_3.6/ROMS/Bin/build_roms.sh
+/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMS_3.6/Compilers/Linux-ifort.mk
+</code></pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>srun<span class="w"> </span>-p<span class="w"> </span>64c512g<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>--exclusive<span class="w"> </span>--pty<span class="w"> </span>/bin/bash
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/ROMS/ROMSProjects/upwelling
+<span class="nb">export</span><span class="w"> </span><span class="nv">PROJECT_DIR</span><span class="o">=</span>~/ROMS/ROMSProjects/upwelling
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$PROJECT_DIR</span>
+cp<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMS_3.6/ROMS/Bin/build_roms.sh<span class="w"> </span>./
+cp<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMS_3.6/ROMS/Include/upwelling.h<span class="w"> </span>./
+cp<span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMS_3.6/ROMS/External/roms_upwelling.in<span class="w"> </span>./
+./build_roms.sh
+</code></pre></div>
+</div>
+<h2 id="id6"><span id="id7"></span>π2.0 自定义编译ROMS<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<p>为方便广大师生编译ROMS，我们已将 <code class="docutils literal notranslate"><span class="pre">`build_roms.sh`</span></code> 和 <code class="docutils literal notranslate"><span class="pre">`Linux-ifort.mk`</span></code> 两个文件中依赖软件的参数提前修改
+上述两个文件的位置为</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>/lustre/opt/contribute/cascadelake/ROMS/ROMS_3.6/ROMS/Bin/build_roms.sh
+/lustre/opt/contribute/cascadelake/ROMS/ROMS_3.6/Compilers/Linux-ifort.mk
+</code></pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>srun<span class="w"> </span>-p<span class="w"> </span>cpu<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>--exclusive<span class="w"> </span>--pty<span class="w"> </span>/bin/bash
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/ROMS1/ROMSProjects/upwelling
+<span class="nb">export</span><span class="w"> </span><span class="nv">PROJECT_DIR</span><span class="o">=</span>~/ROMS1/ROMSProjects/upwelling
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$PROJECT_DIR</span>
+cp<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMS_3.6/ROMS/Bin/build_roms.sh<span class="w"> </span>./
+cp<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMS_3.6/ROMS/Include/upwelling.h<span class="w"> </span>./
+cp<span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMS_3.6/ROMS/External/roms_upwelling.in<span class="w"> </span>./
+./build_roms.sh
+</code></pre></div>
+</div>
+<h2 id="id8"><span id="id9"></span>思源一号 预编译ROMS<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<p>更改 <code class="docutils literal notranslate"><span class="pre">`roms_upwelling.in`</span></code> 文件的参数，如下所示</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">VARNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/dssg/opt/icelake/linux-centos8-icelake/oneapi-2021.4.0/ROMS/ROMS_3.6/ROMS/External/varinfo.yaml
+<span class="nv">NtileI</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="w">                               </span>!<span class="w"> </span>I-direction<span class="w"> </span>partition
+<span class="nv">NtileJ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="w">                               </span>!<span class="w"> </span>J-direction<span class="w"> </span>partition
+</code></pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">`NtileI`</span></code> 和 <code class="docutils literal notranslate"><span class="pre">`NtileJ`</span></code> 的乘积需等于总核数</p>
+<p>提交如下脚本运行作业</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=ROMS</span>
+<span class="c1">#SBATCH --partition=64c512g</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=4</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>roms/3.6-intel-2021.4.0
+mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">4</span><span class="w"> </span>romsM<span class="w"> </span>roms_upwelling.in
+</code></pre></div>
+</div>
+<h2 id="id10"><span id="id11"></span>π2.0 预编译ROMS<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
+<p>更改 <code class="docutils literal notranslate"><span class="pre">`roms_upwelling.in`</span></code> 文件的参数，如下所示</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">VARNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/lustre/opt/contribute/cascadelake/ROMS/ROMS_3.6/ROMS/External/varinfo.yaml
+<span class="nv">NtileI</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="w">                               </span>!<span class="w"> </span>I-direction<span class="w"> </span>partition
+<span class="nv">NtileJ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="w">                               </span>!<span class="w"> </span>J-direction<span class="w"> </span>partition
+</code></pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">`NtileI`</span></code> 和 <code class="docutils literal notranslate"><span class="pre">`NtileJ`</span></code> 的乘积需等于总核数</p>
+<p>提交如下脚本运行作业</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=ROMS</span>
+<span class="c1">#SBATCH --partition=small</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=4</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>roms/3.6-intel-2021.4.0
+mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">4</span><span class="w"> </span>romsM<span class="w"> </span>roms_upwelling.in
+</code></pre></div>
+</div>
+<h2 id="id12">运行结果<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h2>
+<h3 id="id13">思源一号上的ROMS<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>核数</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>8</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>时间</p></td>
+<td><p>107</p></td>
+<td><p>56</p></td>
+<td><p>36</p></td>
+<td><p>23</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="id14">π2.0上的ROMS<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h3>
+<table class="docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>核数</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>8</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>时间</p></td>
+<td><p>134</p></td>
+<td><p>70</p></td>
+<td><p>41</p></td>
+<td><p>29</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="id15">参考资料<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.myroms.org/">ROMS官方网站</a></p></li>
+</ul>
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="damask.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DAMSK" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              DAMSK
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="proj.html" class="md-footer__link md-footer__link--next" aria-label="Next: PROJ" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              PROJ
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, houys2.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.1.2.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.1b5b7a2d5891aec19.min.js?v=1e7b0789"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    
+  </body>
+</html>
