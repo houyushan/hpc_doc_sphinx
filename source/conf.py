@@ -14,13 +14,24 @@ release = 'v0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+# extensions = [
+#     'sphinx-prompt',
+#     'sphinx_copybutton',
+#     'sphinx_substitution_extensions',
+#     'sphinx.ext.autosectionlabel',
+#     'sphinx_immaterial'
+# ]
 extensions = [
-    'sphinx-prompt',
-    'sphinx_copybutton',
-    'sphinx_substitution_extensions',
-    'sphinx.ext.autosectionlabel',
+    'recommonmark',
+    'sphinx_markdown_tables',
     'sphinx_immaterial'
 ]
+
+# 解析文件格式
+source_suffix = {'.rst': 'restructuredtext',
+                 '.txt': 'markdown',
+                 '.md': 'markdown'
+                 }
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -50,7 +61,7 @@ html_sidebars = {
 #
 html_theme = 'sphinx_immaterial'
 html_favicon = 'favicon.png'
-html_title = '上海交大超算平台用户手册 Documentation'
+html_title = 'LICO超算平台用户手册 Documentation'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -59,13 +70,8 @@ html_logo = 'logos.png'
 # Material theme options (see theme.conf for more information)
 html_theme_options = {
     # Set the repo location to get a badge with stats
-    'repo_url': 'https://github.com/SJTU-HPC/docs.hpc.sjtu.edu.cn',
-    'repo_name': 'SJTU HPC Docs',
-
-    "analytics": {
-                    "provider": "google",
-                    "property": "UA-190329530-1"
-                 },
+    'repo_url': 'https://10.240.214.64/',
+    'repo_name': 'LiCO HPC Docs',
 
     # Visible levels of the global TOC; -1 means unlimited
     # If False, expand all TOC entries
@@ -73,12 +79,15 @@ html_theme_options = {
     # If True, show hidden TOC entries
     'globaltoc_includehidden': True,
 
+
     # Do not download google fonts
     "font": False,
 
     # Light and dark mode
     'palette': [{ 'media': '(prefers-color-scheme: light)',
                  'scheme': 'default',
+                 "primary": "blue",
+                 "accent": "blue",
                  'toggle': {
                     'icon': 'material/lightbulb-outline',
                     'name': 'Switch to dark mode',
@@ -86,6 +95,8 @@ html_theme_options = {
                 },
                 { 'media': '(prefers-color-scheme: dark)',
                   'scheme': 'slate',
+                  "primary": "blue",
+                  "accent": "blue",
                   'toggle': {
                     'icon': 'material/lightbulb',
                     'name': 'Switch to light mode',
@@ -116,14 +127,6 @@ LaTeXBuilder.supported_image_types = [
     'image/jpg'
 ]
 
-# Image Placeholder
-rst_prolog = """
-.. |cpu| image:: /img/cpu-icon.png
-.. |gpu| image:: /img/gpu-icon.png
-.. |arm| image:: /img/arm-icon.png
-.. |sig| image:: /img/singularity-icon.png
-.. |studio| image:: /img/studio-icon.png
-"""
 
 # LaTeX PDF customization
 latex_engine = 'xelatex'
