@@ -10,20 +10,44 @@
 
 本管理软件支持通过浏览器轻松登陆到管理界面进行操作，同时也可以通过其他终端工具登陆到集群登录节点进行命令行操作。
 
+现有集群
+===================
+集群一：
+`cluster01 <https://10.240.214.64/#/>`_
+
+集群二：
+`cluster02 <https://10.240.214.64/#/>`_
+
+
 常用文档
 ===================
 
-`docs <https://docs.hpc.sjtu.edu.cn/>`_ 为HPC和AI平台使用文档，为用户提供快速上手指导和问题解答。可访问 `上海交通大学 HPC 站点 <https://hpc.sjtu.edu.cn/>`_ 获取HPC和AI平台更多信息。
+`docs <https://docs.hpc.sjtu.edu.cn/>`_ 为HPC和AI平台使用文档，为用户提供快速上手指导和问题解答。可访问 `XXXX大学 HPC 站点 <https://hpc.sjtu.edu.cn/>`_ 获取HPC和AI平台更多信息。
 
-1. :doc:`quickstart/index`
-2. :doc:`studio/index`
-3. :doc:`job/index`
-4. :doc:`app/index`
+1. :doc:`/login/index`
+2. :doc:`/quickstart/index`
+3. :doc:`/clientssh/index`
+4. :doc:`/filemanger/index`
+5. :doc:`/submitjob/index`
+6. :doc:`/managejob/index`
+7. :doc:`/tools/index`
+8. :doc:`/apps/index`
+9. :doc:`/questions/index`
+10. :doc:`/downloads/index`
 
 注意事项
 ===================
 
 - 无
+
+ 
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   login/index
 
 
 .. toctree::
@@ -32,21 +56,54 @@
 
    quickstart/index
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   clientssh/index
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
-   studio/index
+   filemanger/index
+
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
-   job/index
+   submitjob/index
+
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
-   app/index
+   managejob/index
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   tools/index
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   apps/index
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   questions/index
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   downloads/index
+

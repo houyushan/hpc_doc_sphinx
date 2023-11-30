@@ -7,8 +7,9 @@ LiCO 支持如下几大类软件的作业提交
 1. :doc:`/app/HPC/ANSYS`
 2. :doc:`/app/HPC/MPI`
 3. :doc:`/app/HPC/openMP`
-4. :doc:`/app/AI/index`
-5. :doc:`/app/oneAPI/index`
+4. :doc:`/app/HPC/test`
+5. :doc:`/app/AI/index`
+6. :doc:`/app/oneAPI/index`
 
 HPC
 ======================================

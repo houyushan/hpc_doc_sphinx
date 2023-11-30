@@ -14,14 +14,11 @@ release = 'v0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# extensions = [
-#     'sphinx-prompt',
-#     'sphinx_copybutton',
-#     'sphinx_substitution_extensions',
-#     'sphinx.ext.autosectionlabel',
-#     'sphinx_immaterial'
-# ]
 extensions = [
+    'sphinx-prompt',
+    'sphinx_copybutton',
+    # 'sphinx_substitution_extensions',
+    'sphinx.ext.autosectionlabel',
     'recommonmark',
     'sphinx_markdown_tables',
     'sphinx_immaterial'
@@ -71,7 +68,7 @@ html_logo = 'logos.png'
 html_theme_options = {
     # Set the repo location to get a badge with stats
     'repo_url': 'https://10.240.214.64/',
-    'repo_name': 'LiCO HPC Docs',
+    'repo_name': 'LiCO HPC',
 
     # Visible levels of the global TOC; -1 means unlimited
     # If False, expand all TOC entries
@@ -127,6 +124,10 @@ LaTeXBuilder.supported_image_types = [
     'image/jpg'
 ]
 
+
+rst_prolog = """
+.. |my_variable| replace:: "我的变量"
+"""
 
 # LaTeX PDF customization
 latex_engine = 'xelatex'

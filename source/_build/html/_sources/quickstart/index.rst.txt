@@ -1,7 +1,17 @@
 ********
-快速上手
+快速入门
 ********
 
 怎么使用LiCO提交作业
 ================================
-点击模板，选择需要的模板，填写相关选项，提交。
+
+.. 1. :doc:`/quickstart/submitgeneral`
+
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 提交常规作业
+
+   submitgeneral
